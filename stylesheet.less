@@ -1,0 +1,321 @@
+@import "@{templateCommon}/basekit-bootstrap.less";
+@import "@{templateLocal}/css/widgets.less";
+@import "@{templateLocal}/css/grid.less";
+@import "@{templateLocal}/css/blog.less";
+@import "@{templateLocal}/css/ecommerce.less";
+@import "@{templateLocal}/css/menu.less";
+@import "@{templateLocal}/css/one-page-scroll.less";
+
+
+// -----------------------------
+// Page Settings
+// -----------------------------
+
+
+html, body, .bk-pt-home, #wrap {
+  height: 100%;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1400px;
+}
+
+// Mixins
+
+.border-radius (@radius: 6px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.transition (@prop: all, @time: 0.5s, @ease: ease) {
+	-webkit-transition: @prop @time @ease;  
+	-moz-transition:    @prop @time @ease;
+	-ms-transition:     @prop @time @ease; 
+	-o-transition:      @prop @time @ease;  
+}
+
+
+
+// -----------------------------
+// Header
+// -----------------------------
+
+
+.bk-header {
+	padding: 30px 40px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+.widget {
+	&.logo, &.companyname {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	&.logo {
+		margin-right: 10px;
+	}
+	&.companyname a {
+		font-family: @font-swatch10-font-family;
+		font-size: @font-swatch10-font-size;
+		font-weight: @font-swatch10-font-weight;
+		line-height: @font-swatch10-line-height;
+	}
+}
+
+
+// Navigation
+
+.bk-nav {
+	background: @color-swatch6;
+	height: 100%;
+	position: fixed;
+	right: -320px;
+	width: 320px;
+	.transition( all, 0.5s, ease);
+    z-index: 9999;
+	@media only screen and (max-height: 450px) {
+		height: auto;
+	}
+    @media @mobile {
+    	right: -250px;
+    	width: 250px;
+    }
+}
+
+.widget.extendednavigation {
+	background: @color-swatch6;
+	width: 100%;
+    ul {
+        display: block;
+        padding: 0;
+        list-style: none;
+        width: 100%;
+        @media @tablet {
+        	display: block;
+        }
+        li {
+            display: block;
+            padding: 10px 0;
+            cursor: pointer;
+            &:before {
+	            display: inline-block;
+	            text-decoration: inherit;
+	            width: 1em;
+	            color: #59e9df;
+	            margin-right: 12px;
+	            text-align: center;
+	            font-variant: normal;
+	            font-size: 0.75em;
+	            text-transform: none;
+	            line-height: 1em;
+        	}
+            &:hover { 
+            	.transition( all, 0.5s, ease);
+            	ul {
+            		background: transparent;
+            		border-bottom: 2px solid fade(@color-swatch1, 10%);
+            		border-top: 2px solid fade(@color-swatch1, 10%);
+            		position: relative;
+            		margin-left: 20px;
+            		margin-top: 8px;
+            		width: 90%;
+            		li {
+            			padding: 12px 6px;
+            			&:first-child {
+            				padding-top: 20px;
+            			}
+            			&:last-child {
+            				padding-bottom: 20px;
+            			}
+            			a {
+            				padding-left: 15px;
+            			}
+            		}
+            		.text {
+            			font-size: bkscale(@font-swatch6-font-size, 0.90);
+            		}
+            	}
+            }
+            ul {
+				display: none;
+			}
+            @media @tablet {
+            	border-bottom: none;
+            }
+            &.folder {
+            	&:after {
+            		border-top-color: lighten(@color-swatch5, 32%);
+            		top: 22px;
+            	}
+            	.text {
+            		color: lighten(@color-swatch5, 32%);
+            	}
+	        }
+	        a {
+	        	color: lighten(@color-swatch5, 32%);
+	        	&:hover {
+	        		color: lighten(@color-swatch5, 60%);
+	        	}
+	        }
+        }
+
+    }
+	a.pull {
+		background-color: fade(@color-swatch6, 15%);
+		border: 1px solid fade(@color-swatch1, 20%);
+		.border-radius(6px);
+		padding: 11px 9px 0;
+		position: absolute;
+		right: 345px;
+		top: 30px; 
+		display: inline-block;
+		width: 42px;
+		height: 38px;
+		overflow: hidden;
+		cursor: pointer;
+		outline: none;
+		.transition( all, 0.5s, ease);
+	    @media @mobile {
+	    	right: 270px;
+	    	top: 16px;
+	    }
+	    &:hover {
+	    	background-color: fade(@color-swatch6, 25%);
+	    	border: 1px solid fade(@color-swatch1, 30%);
+	    	.transition( all, 0.5s, ease);
+	    }
+		&:after {
+			content: '';
+			position: absolute;
+			width: 22px;
+			height: 2px;
+			background: white;
+			box-shadow: 0 6px 0 white, 0 12px 0 white;
+			@media @tablet {
+				top: 11px;
+				right: 9px;
+			}
+		}
+	}
+	.bk-overlay {
+		width: 100%;
+	}
+}
+
+div.widget .extendednavigation ul, div.widget.extendednavigation ul {
+	display: block;
+	li {
+		display: block; 
+	}
+}
+
+div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
+	display: block!important;
+}
+
+.menu-active .widget.extendednavigation#slide-menu { 
+	right: 0px; 
+}
+
+.menu-active .bk-nav { 
+	display: table;
+	height: 100%;
+	position: absolute;
+	right: 0; 
+	.transition( all, 0.5s, ease);
+}
+
+
+
+// -----------------------------
+// Feature Scroll (Homepage)
+// -----------------------------
+
+
+.bk-feature section  {
+	display: table;
+	overflow: hidden;
+	.contain {
+		margin: 0;
+		position: relative;
+		height: 100%;
+		width: 100%;
+	}
+}
+
+.bk-feature section {
+	&.slide-1 {
+
+	}
+	&.slide-2 {
+
+	}
+	&.slide-3 {
+
+	}
+}
+
+body.disabled-onepage-scroll .onepage-wrapper section {
+  min-height: 100%;
+  height: auto;
+}
+
+
+// Feature
+
+.widget.feature {
+	height: 100%;
+	h2 {
+		font-family: @font-swatch8-font-family;
+		font-size: @font-swatch8-font-size;
+		line-height: @font-swatch8-line-height;
+		padding-bottom: 10px;
+	}
+	h3 {
+		color: fade(@font-swatch9-color, 70%);
+		font-family: @font-swatch9-font-family;
+		font-size: @font-swatch9-font-size;
+		font-weight: @font-swatch9-font-weight;
+		line-height: @font-swatch9-line-height;
+	}
+}
+
+.widget.feature .feature-bgimg .content {
+	text-align: center;
+	button.btn {
+		margin-top: 25px;
+	}
+}
+    
+
+
+// -----------------------------
+// Main
+// -----------------------------
+
+
+div[role="main"] {
+	padding: 40px 0;
+	@media @tablet { 
+		padding: 40px 25px;
+	}
+}
+
+
+// -----------------------------
+// Footer
+// -----------------------------
+
+.bk-footer {
+	border-top: 1px solid lighten(@color-swatch5, 40%);
+	padding: 40px 0;
+	@media @tablet { 
+		padding: 40px 25px;
+	}
+}
