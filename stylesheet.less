@@ -4,7 +4,6 @@
 @import "@{templateLocal}/css/blog.less";
 @import "@{templateLocal}/css/ecommerce.less";
 @import "@{templateLocal}/css/menu.less";
-@import "@{templateLocal}/css/one-page-scroll.less";
 
 
 // -----------------------------
@@ -12,8 +11,12 @@
 // -----------------------------
 
 
-html, body, .bk-pt-home, #wrap {
+html, body {
   height: 100%;
+}
+
+body {
+	overflow-x: hidden;
 }
 
 .container {
@@ -238,32 +241,72 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 // -----------------------------
 
 
-.bk-feature section  {
-	display: table;
+section {
+    position: relative;
 	overflow: hidden;
-	.contain {
-		margin: 0;
-		position: relative;
-		height: 100%;
-		width: 100%;
+	width: 100%;
+	height: 100%;
+	/*&#first {
+		top: 0;
 	}
-}
-
-.bk-feature section {
-	&.slide-1 {
-
+	&#second {
+		top: 100%;
 	}
-	&.slide-2 {
-
+	&#third {
+		top: 200%;
+	}*/
+	/*&.active {
+		position: fixed;
+		top: 0!important;
+	}*/
+	&#fourth {
+		overflow-y: scroll;
+		&.active .panel-menu {
+			display: none;
+		}
 	}
-	&.slide-3 {
+ }
 
+.panel-menu {
+	position: fixed;
+	right: 25px;
+	top: 48%;
+	z-index: 5;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+		ul {
+			list-style: none;
+			li {
+				padding: 0;
+				text-align: center;
+			}
+			a {
+				padding: 10px;
+				width: 12px;
+				height: 12px;
+				display: block;
+				&:before {
+					content: '';
+					position: absolute;
+					width: 12px;
+					height: 12px;
+					background: transparent;
+					border: 1px solid fade(@color-swatch4, 65%);
+					border-radius: 10px;
+					-webkit-border-radius: 10px;
+					-moz-border-radius: 10px;
+					left: 6px;
+				}
+			&.active:before {
+				width: 12px;
+				height: 12px;
+				background: @color-swatch4;
+				border: 1px solid @color-swatch4;
+				left: 6px;
+			}
+		}
 	}
-}
-
-body.disabled-onepage-scroll .onepage-wrapper section {
-  min-height: 100%;
-  height: auto;
 }
 
 
@@ -294,8 +337,6 @@ body.disabled-onepage-scroll .onepage-wrapper section {
 	}
 }
     
-
-    .widget.feature .feature-bgimg .content
 
 
 // -----------------------------

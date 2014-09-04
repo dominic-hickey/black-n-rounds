@@ -1,40 +1,31 @@
 {% extends "layout.twig" %}
 {% block content %}
 
-	<div class="bk-pt-home" id="wrap">
-		<nav class="bk-nav" id="#bk-nav">
-			<div class="container">
-				<div class="row">
-					{{widget('extendednavigation', 'header-navigation', {"align":"right"})|raw}}
-				</div><!--end row-->
-			</div><!--end container-->
-		</nav><!--end bk-nav-->
 
-		<div class="bk-feature">
-			<section class="slide-1">	
-				<div class="contain">
-					{{widget('feature', 'feature-slide-1', {"header": "Slide One", "strapline":"Strapline for slide one.", "buttonText":"LORUM IPSUM", "defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
-				</div>
-			</section>
+<section class="panel" id="first" data-panel="first">
+		{{widget('feature', 'feature-slide-1', {"header": "Slide One", "strapline":"Strapline for slide one.", "buttonText":"LORUM IPSUM", "defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
+</section>
 
-			<section class="slide-2">	
-				<div class="contain">
-					{{widget('feature', 'feature-slide-2', {"header": "Slide Two", "strapline":"Strapline for slide one.", "buttonText":"Find out more today →", 'positionTopPercentage': '50','showBtn': true})|raw}}
-				</div>
-			</section>
+<section class="panel" id="second" data-panel="second">	
+		{{widget('feature', 'feature-slide-2', {"header": "Slide Two", "strapline":"Strapline for slide one.", "buttonText":"Find out more today →", 'positionTopPercentage': '50','showBtn': true})|raw}}
+</section>
 
-			<section class="slide-3">	
-				<div class="contain">
-					{{widget('feature', 'feature-slide-3', {"header": "Slide Three", "strapline":"Strapline for slide one.", "buttonText":"Find out more today →", 'positionTopPercentage': '50','showBtn': true})|raw}}
-				</div>
-			</section>
-		</div>
+<section class="panel" id="third" data-panel="third">	
+		{{widget('feature', 'feature-slide-3', {"header": "Slide Three", "strapline":"Strapline for slide one.", "buttonText":"Find out more today →", 'positionTopPercentage': '50','showBtn': true})|raw}}
+</section>
 
-		<header class="bk-header">
-					{{widget('logo', 'logo', {"defaultlogo": asset('images/nordic-logo.png'),"showTplWidget":"0"})|raw}}
-					{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-		</header>
-
-	</div><!--end bk-pt-home-->
+<section class="panel" id="fourth" data-panel="fourth">
+	<nav class="panel-menu">
+		<ul>
+			<li><a href="" data-panel="first"></a></li>
+			<li> <a href="" data-panel="second"></a></li>
+			<li><a href="" data-panel="third"></a></li>
+			<li><a href="" data-panel="fourth"></a></li>
+		</ul>
+	</nav>
+	<div class="container">	
+		{{zone('main')|raw}}
+	</div><!--end container-->
+</section><!--end main-->
 
 {% endblock %}
