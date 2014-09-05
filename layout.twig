@@ -28,33 +28,6 @@
 
 		<script>window.jQuery || document.write('<script src="{{ asset('libs/jquery-1.10.2.min.js')}}"><\/script>')</script>
 
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		<script src="{{asset('/js/jquery.panelSnap.js')}}"></script>
-
-
-	   <script>
-		  jQuery(function($) {
-		    var options = {
-		      $menu: true,
-		      menuSelector: 'a',
-		      panelSelector: '.panel',
-		      namespace: '.panelSnap',
-		      onSnapStart: function(){},
-		      onSnapFinish: function(){},
-		      onActivate: function(){},
-		      directionThreshold: 2,
-		      slideSpeed: 400,
-		      keyboardNavigation: {
-		        enabled: false,
-		        nextPanelKey: 40,
-		        previousPanelKey: 38,
-		        wrapAround: true
-		      }
-		    };
-		    $('body').panelSnap(options);
-		  });
-		</script>
-
 		<script>
 		  (function() {
 		    var $body = document.getElementById("wrap");
@@ -67,7 +40,6 @@
 		    }
 		  }).call(this);
 		</script>
-
 
 	</body>
 </html>

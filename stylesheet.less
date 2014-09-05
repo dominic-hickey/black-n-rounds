@@ -16,7 +16,7 @@ html, body {
 }
 
 body {
-	overflow-x: hidden;
+	position: relative;
 }
 
 .container {
@@ -234,109 +234,73 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	.transition( all, 0.5s, ease);
 }
 
-
-
-// -----------------------------
-// Feature Scroll (Homepage)
-// -----------------------------
-
-
-section {
-    position: relative;
-	overflow: hidden;
-	width: 100%;
-	height: 100%;
-	/*&#first {
-		top: 0;
+.widget.responsiveslideshow {
+	.title, .description {
+		display: block!important;
 	}
-	&#second {
-		top: 100%;
-	}
-	&#third {
-		top: 200%;
-	}*/
-	/*&.active {
-		position: fixed;
-		top: 0!important;
-	}*/
-	&#fourth {
-		overflow-y: scroll;
-		&.active .panel-menu {
-			display: none;
-		}
-	}
- }
-
-.panel-menu {
-	position: fixed;
-	right: 25px;
-	top: 48%;
-	z-index: 5;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-		ul {
-			list-style: none;
-			li {
-				padding: 0;
-				text-align: center;
-			}
-			a {
-				padding: 10px;
-				width: 12px;
-				height: 12px;
-				display: block;
-				&:before {
-					content: '';
-					position: absolute;
-					width: 12px;
-					height: 12px;
-					background: transparent;
-					border: 1px solid fade(@color-swatch4, 65%);
-					border-radius: 10px;
-					-webkit-border-radius: 10px;
-					-moz-border-radius: 10px;
-					left: 6px;
-				}
-			&.active:before {
-				width: 12px;
-				height: 12px;
-				background: @color-swatch4;
-				border: 1px solid @color-swatch4;
-				left: 6px;
-			}
-		}
-	}
-}
-
-
-// Feature
-
-.widget.feature {
-	height: 100%;
-	h2 {
+	.title {
+		color: @font-swatch8-color;
 		font-family: @font-swatch8-font-family;
 		font-size: @font-swatch8-font-size;
 		line-height: @font-swatch8-line-height;
 		padding-bottom: 10px;
 	}
-	h3 {
+	.description {
 		color: fade(@font-swatch9-color, 70%);
 		font-family: @font-swatch9-font-family;
 		font-size: @font-swatch9-font-size;
 		font-weight: @font-swatch9-font-weight;
 		line-height: @font-swatch9-line-height;
 	}
-}
-
-.widget.feature .feature-bgimg .content {
-	text-align: center;
-	height: 100%;
-	button.btn {
-		margin-top: 25px;
+	.content-wrapper {
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		resize: vertical;
+		overflow: auto;
+		text-align: center;
+		position: relative;
+		top: -25px;
 	}
 }
-    
+
+
+
+// Feature
+
+.widget.responsiveslideshow span.inner img {
+	display: none;
+}
+
+.widget.responsiveslideshow span.inner {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	overflow: hidden;
+	&.portrait {
+		background-repeat: no-repeat;
+		background-position: center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+}
+
+.widget.responsiveslideshow, .slideshow-widget-wrapper, .widget.responsiveslideshow .slideshow-widget, .widget.responsiveslideshow .slideshow-image-list {
+	min-height: 100%;
+	height: 100%;
+}
+
+.slideshow-widget-controls {
+	position: absolute;
+	top: 48%;
+	right: 25px;
+}
 
 
 // -----------------------------
