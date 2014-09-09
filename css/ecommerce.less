@@ -348,16 +348,19 @@
         font-size: 20px;
     }
     .ecom-product-variation {
-        padding: 12px 0 6px;
+        border-top: 1px solid lighten(@color-swatch5, 65%);
+        border-bottom: 1px solid lighten(@color-swatch5, 65%);
+        padding: 10px 0 2px;
+        margin: 12px 0 2px;
     }
 
     // Add to Cart Button
 
     .btn.ecom-product-add-to-cart-btn {
-        padding: 5px 10px 5px 14px;
+        padding: 10px 16px;
         background-image: image('/images/ic-basket.png');
         background-repeat: no-repeat;
-        background-position: 8% 46%;
+        background-position: 10% 46%;
         background-size: 14px;
         font-size: 13px;
         &:hover {
@@ -490,10 +493,10 @@
             font-size: 14px;
         }
         button {
-            border-radius: 4px;
+            .border-radius(50px);
             width: 24px;
             height: 24px;
-            padding: 0;
+            padding: 1px 9px;
             margin: 0;
             border: 0;
             box-shadow: none;
@@ -523,7 +526,7 @@
         // Heading Row
 
         tr:first-child {
-            background-color: @color-swatch4;
+            background-color: lighten(@color-swatch5, 65%);
             -webkit-border-top-left-radius: 4px;
             -webkit-border-top-right-radius: 4px;
             -moz-border-radius-topleft: 4px;
@@ -534,7 +537,7 @@
             font-size: 14px;
             font-weight: 400;
             letter-spacing: 1px;
-            color: @color-swatch1;
+            color: @color-swatch4;
             text-transform: uppercase;
             @media @mobile {
                 font-size: 12px;

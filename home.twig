@@ -1,46 +1,50 @@
 {% extends "layout.twig" %}
 {% block content %}
 
-<nav class="bk-nav" id="#bk-nav">
-	<div class="container">
-		<div class="row">
-			{{widget('extendednavigation', 'header-navigation', {"align":"right"})|raw}}
-		</div><!--end row-->
-	</div><!--end container-->
-</nav><!--end bk-nav-->
+<div class="bk-feature">
 
-{{widget('responsiveslideshow', 'responsiveslideshow',
-	{'duration':'5',
-		'transSpeed': '1000',
-		'transType': 'fade',
-		'showButtons': false,
-		'showBullets': true,
-		'allowPause': false,
-		'allowLoop': false,
-		'showDescription': true,
-		'showTitle': true,
-		'crop': true,
-		'images': [
-			{'imageHeight':'auto', 'imageWidth':'100%', 'url':asset('images/feature-bg.jpg'), 'title':'The Quest', 'description': 'To the west side of the bridge'},
-			{'imageHeight':'auto', 'imageWidth':'100%', 'url':asset('images/feature-bg-2.jpg'), 'title':'The Quest', 'description': 'To the west side of the bridge'},
-			{'imageHeight':'auto', 'imageWidth':'100%', 'url':asset('images/feature-bg-3.jpg'), 'title':'The Quest', 'description': 'To the west side of the bridge'}
-		]
-	})|raw
-}}
+	<nav class="bk-nav" id="#bk-nav">
+		<div class="container">
+			<div class="row">
+				{{widget('extendednavigation', 'header-navigation', {"align":"right"})|raw}}
+			</div><!--end row-->
+		</div><!--end container-->
+	</nav><!--end bk-nav-->
 
-<header class="bk-header">
-	{{widget('logo', 'logo', {"defaultlogo": asset('images/nordic-logo.png'),"showTplWidget":"0"})|raw}}
-	{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-</header>
+	{{widget('responsiveslideshow', 'responsiveslideshow',
+		{'duration':'5',
+			'transSpeed': '1000',
+			'transType': 'fade',
+			'showButtons': false,
+			'showBullets': true,
+			'allowPause': false,
+			'allowLoop': false,
+			'showDescription': true,
+			'showTitle': true,
+			'crop': true,
+			'images': [
+				{'imageHeight':'auto', 'imageWidth':'100%', 'url':asset('images/feature-bg.jpg'), 'title':'The Quest', 'description': 'To the west side of the bridge'},
+				{'imageHeight':'auto', 'imageWidth':'100%', 'url':asset('images/feature-bg-2.jpg'), 'title':'The Quest', 'description': 'To the west side of the bridge'},
+				{'imageHeight':'auto', 'imageWidth':'100%', 'url':asset('images/feature-bg-3.jpg'), 'title':'The Quest', 'description': 'To the west side of the bridge'}
+			]
+		})|raw
+	}}
 
-<div role="main">
-	<div class="container">
-		<div class="row">
-			<div class="span-12">	
-			{{zone('main')|raw}}
-			</div><!--end span-12-->
-		</div><!--end row-->
-	</div><!--end container-->
-</div><!--end main-->
+	<header class="bk-header">
+		{{widget('logo', 'logo', {"defaultlogo": asset('images/nordic-logo.png'),"showTplWidget":"0"})|raw}}
+		{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+	</header>
+
+</div><!--end bk-feature-->
+
+	<div role="main">
+		<div class="container">
+			<div class="row">
+				<div class="span-12">	
+				{{zone('main')|raw}}
+				</div><!--end span-12-->
+			</div><!--end row-->
+		</div><!--end container-->
+	</div><!--end main-->
 
 {% endblock %}

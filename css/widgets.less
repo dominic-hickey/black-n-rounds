@@ -27,7 +27,7 @@ button.btn,
 	font-weight:  @font-swatch7-font-weight;
 	line-height:@font-swatch7-line-height;
 	letter-spacing: @font-swatch7-letter-spacing;
-	padding: 10px 16px;
+	padding: 12px 16px;
 	.border-radius(40px);
 	display: inline-block;
 	cursor: pointer;
@@ -96,12 +96,14 @@ button {
 .widget {
 	&.profile, &.signupform, &.blogsearch {
 		form fieldset input, form input, input, button, button.btn {
-			border: 1px solid darken(@font-swatch7-background-color, 8%);
-			.border-radius(0 50px 50px 0);
+			border: 1px solid darken(@font-swatch7-background-color, 5%);
 			padding-left: 15px;
-			padding-right: 20px;
+			padding-right: 15px;
 			position: relative;
-			height: 48px;
+			height: 50px;
+		}
+		form fieldset input, form input, input {
+			margin-right: 15px;
 		}
 	}
 }
@@ -110,46 +112,45 @@ button {
 // Contact Form
 
 .widget.contactform {
-	border-left: 3px solid @color-swatch4;
-	padding-left: 30px;
-	.form-group:first-child:before  {
-		content: "";
-		background-image: url(templates/alexander/images/email-icon.png);
-		margin-right: 6px;
-		height: 30px;
-		width: 40px;
-		display: inline-block;
-		background-repeat: no-repeat;
-		position: relative;
-		top: 8px;
-	}
-	.form-group:first-child input {
-		display: inline-block;
-		width: 90%;
-	}
 	label {
 		text-indent: -9999em;
 		overflow: hidden;
 		height: 0;
 	}
-	input {
-		border: 0;
-		border-bottom: 2px solid lighten(@color-swatch4, 10%);
-		margin-bottom: 30px;
-		&:before {
-			content: "";
-			background-image: image('/images/email-icon.png');
-			margin-right: 10px;
-			height: 40px;
-			width: 40px;
-		}
+	input, textarea {
+		background-color: lighten(@color-swatch5, 65%);
+		border: 1px solid lighten(@color-swatch5, 58%);
+		color: @color-swatch4;
+		font-size: @font-swatch5-font-size;
+		outline; none;
+		margin-bottom: 20px;
+		padding: 15px;
+		-webkit-appearance: none;
+	    -moz-appearance: none;
+	    appearance: none;
+	    transition(all, .25s, ease-out);
+	    &:focus {
+	    	border: 1px solid lighten(@color-swatch5, 50%);
+	    	color: @color-swatch4;
+	    }
+	}
+	input:before {
+		background-image: image('/images/email-submit-icon.png');
+		background-size: 30px 30px;
+		background-position: 11px 8px;
+		background-repeat: no-repeat;
+		content: "";
+		display: inline-block;
 	}
 	textarea {
-		background-color: lighten(@color-swatch5, 45%);
-		border: 1px solid lighten(@color-swatch5, 35%);
-		.border-radius(8px);
-		margin-bottom: 20px;
-		width: 94%;
+		&:before {
+			background-image: image('/images/email-submit-icon.png');
+			background-size: 30px 30px;
+			background-position: 11px 8px;
+			background-repeat: no-repeat;
+			content: "";
+			display: inline-block;
+		}
 	}
 	button.btn {
 		background-color: @color-swatch4;
@@ -166,13 +167,11 @@ button {
 
 .widget.profile form fieldset input {
 	background-color: @color-swatch1;
-	border: 1px solid lighten(@color-swatch5, 35%);
-	.border-radius(50px 0 0 50px);
+	border: 1px solid lighten(@color-swatch5, 50%);
 	font-size: bkscale(@font-swatch5-font-size, 0.95);
 }
 
 .widget.profile form fieldset button.btn {
-	left: -5px;
 	@media @mobile {
 		left: 0;
 	}
@@ -183,14 +182,13 @@ button {
 
 .widget.signupform form fieldset input {
 	background-color: @color-swatch1;
-	border: 1px solid lighten(@color-swatch5, 35%);
-	.border-radius(50px 0 0 50px);
+	border: 1px solid lighten(@color-swatch5, 50%);
+	.border-radius(4px);
 	font-size: bkscale(@font-swatch5-font-size, 0.95);
 	text-indent: 6px;
 }
 
 .widget.signupform fieldset button.btn {
-	left: -5px;
 	@media @mobile {
 		left: 0;
 	}
@@ -206,10 +204,10 @@ button {
 
 .widget.blogsearch form input {
 	background-color: @color-swatch1;
-	border: 1px solid lighten(@color-swatch5, 35%);
-	.border-radius(50px 0 0 50px);
+	border: 1px solid lighten(@color-swatch5, 50%);
+	.border-radius(4px);
 	font-size: bkscale(@font-swatch5-font-size, 0.95);
-	margin: 0;
+	margin: 0 15px 8px 0;
 	text-indent: 6px;
 }
 
@@ -219,16 +217,11 @@ button {
 .widget.profile form fieldset input, .widget.signupform form fieldset input, .widget.blogsearch form input {
 	width: 80%;
 	@media @mobile {
-		.border-radius(0px);
 		width: 100%;
 	}
 	+ button, button.btn {
-		margin-left: -4px;
 		max-width: 20%;
 		@media @mobile {
-			.border-radius(25px);
-			left: 0;
-			margin-left: 0;
 			margin-top: 15px;
 			max-width: 100%;
 			width: 100%;
@@ -240,11 +233,26 @@ button {
 
 .widget.profile form fieldset button.btn, .widget.signupform fieldset button.btn {
 	@media @mobile {
-		left: 0;
-		.border-radius(50px);
 	}
 } 
 
+// Placeholder text
+
+::-webkit-input-placeholder {
+  color: darken(white, 30%);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: darken(white, 30%);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: darken(white, 30%);
+}
+
+:-ms-input-placeholder {  
+  color: darken(white, 30%);
+}
 
 
 // -----------------------------
@@ -254,35 +262,59 @@ button {
 
 .widget.socialicons span a, .widget.socialicons span a:hover, .widget.profile .bk-profile-socialicons span a, .widget.profile .bk-profile-socialicons span a:hover {
 	background-color: transparent;
-	border: 2px solid @color-swatch3;
+	background-size: 20px;
+	border: 1px solid fade(@color-swatch3, 50%);
 	.border-radius(50px);
 	color: @color-swatch3;
-	height: 38px;
-	width: 38px;
+	height: 46px;
+	width: 46px;
 	@media @mobile {
-		height: 36px;
-		width: 36px;
+		background-size: 18px;
+		height: 42px;
+		width: 42px;
 	}
+}
+
+.widget.socialicons span a:hover, .widget.profile .bk-profile-socialicons span a:hover {
+	background-size: 20px;
 }
 
 .svg {
 	.bk-socialicons-linkedin a {
 		background-image: image('/images/icons/linkedin.svg');
+		&:hover {
+			background-image: image('/images/icons/linkedin-hover.svg');
+		}
 	}
 	.bk-socialicons-twitter a {
 		background-image: image('/images/icons/twitter.svg');
+		&:hover {
+			background-image: image('/images/icons/twitter-hover.svg');
+		}
 	}
 	.bk-socialicons-facebook a {
 		background-image: image('/images/icons/facebook.svg');
+		&:hover {
+			background-image: image('/images/icons/facebook-hover.svg');
+		}
 	}
 	.bk-socialicons-rss a {
 		background-image: image('/images/icons/rss.svg');
+		&:hover {
+			background-image: image('/images/icons/rss-hover.svg');
+		}
 	}
 	.bk-socialicons-googleplus a {
 		background-image: image('/images/icons/googleplus.svg');
+		&:hover {
+			background-image: image('/images/icons/googleplus-hover.svg');
+		}
 	}
 	.bk-socialicons-youtube a {
 		background-image: image('/images/icons/youtube.svg');
+		&:hover {
+			background-image: image('/images/icons/youtube-hover.svg');
+		}
 	}
 }
 
@@ -329,39 +361,70 @@ div[role="main"] .widget {
 			width: 100%;
 			padding-bottom: 100%;
 		}
+		span.image-data {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
 		span.image-data:hover {
 			background-color: fade(@color-swatch4, 80%);
 			padding: 25px;
-			.transition(all, 0.5s, ease-in);
-		}
-		span.image-data:after {
-			content: "";
-			background: fade(@color-swatch1, 25%);
-			display: block;
-			position: relative;
-			position: absolute;
-			top: 18px;
-			right: 18px;
-			left: 18px;
-			bottom: 18px;
-			.transition(background-color, 0.5s, ease-out);
+			.transition(all, 0.25s, ease-in);
+			.title {
+				opacity: 1;
+				color: #fff;
+				-webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+				transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+			}
+			.description {
+				opacity: 1;
+				-webkit-transform: translate3d(0,0,0);
+				transform: translate3d(0,0,0);
+			}
 		}
 		span.inner {
 			.title,
 			.description {
 				color: @color-swatch1;
+				display: block;
 				font-family: @font-swatch4-font-family;
 				letter-spacing: @font-swatch4-letter-spacing;
-				text-align: left;
+				opacity: 0;
+				text-align: center;
+				width: 100%;
 			}
 			.title {
+				position: absolute;
+				top: 60%;
+				left: 0;
 				font-size: 19px;
 				font-weight: 600;
 				line-height: 26px;
+				-webkit-transition: -webkit-transform 0.35s, color 0.35s;
+				transition: transform 0.35s, color 0.35s;
+				-webkit-transform: translate3d(0,-50%,0);
+				transform: translate3d(0,-50%,0);
+				&:after {
+					content: "";
+					display: block;
+					border: 1px solid fade(@color-swatch1, 25%);
+					margin: 19px auto 5px;
+					width: 15%;
+				}
 			}
 			.description {
+				padding: 20px 20px 30px 20px;
 				font-size: 16px;
 				line-height: 20px;
+				-webkit-transform: translate3d(0,10px,0);
+				transform: translate3d(0,10px,0);
+				webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+				transition: opacity 0.35s, transform 0.35s;
+				position: absolute;
+				bottom: 0;
+				left: 0;
 			}
 		}
 	}
@@ -424,7 +487,7 @@ div[role="main"] .widget {
 		margin-top: 0;
 		.dot {
 			.border-radius(50px);
-			display: block;
+			display: inline-block;
 			width: 12px;
 			height: 12px;
 			background-color: transparent;
@@ -459,10 +522,6 @@ div[role="main"] .widget {
 	img {
 		border-radius: 50%;
 	}
-	p {
-		color: @color-swatch4;
-		padding: 0;
-	}	
 	li {
 		border-bottom: darken(@color-swatch1,10%);
 		&:last-child {
@@ -472,7 +531,6 @@ div[role="main"] .widget {
 	ul li a:hover {
 		text-decoration: none;
 	}
-	// Tweet Content
 	.twitter-profile-pic {
 		float: none;
 		display: inline-block;
@@ -488,49 +546,33 @@ div[role="main"] .widget {
 		float: none;
 		display: inline-block;
 		width: 85%;
-		a .bk-full-name {
+		.bk-full-name {
 			display: block;
 			color: @font-swatch4-color;
 			font-family: @font-swatch4-font-family;
-			font-size: @font-swatch4-font-size;
-			font-weight: @font-swatch4-font-weight;
+			font-size: @font-swatch5-font-size;
+			font-weight: @font-swatch5-font-weight;
 			line-height: @font-swatch4-line-height;
 			letter-spacing: @font-swatch4-letter-spacing;
+			margin-bottom: 4px;
 		}
-		p a, span, a .bk-full-name, p:last-child {
-			display: inline-block;
+		p, p a, span, span a {
 			color: @font-swatch5-color;
 			font-family: @font-swatch5-font-family;
 			font-size: @font-swatch5-font-size;
+			font-weight: @font-swatch5-font-weight;
 			line-height: @font-swatch5-line-height;
 			letter-spacing: @font-swatch5-letter-spacing;
 		}
-		// Tweet Link
-		p a, a:hover span.bk-full-name {
-			font-family: @font-swatch5-font-family;
-			font-size: @font-swatch5-font-size;
-			color: @color-swatch2;
-			text-decoration: none;
-		}
-		span a {
+		p a, span a {
 			text-decoration: none;
 			&:hover {
 				color: @color-swatch2;
 				text-decoration: none;
 			}
 		}
-		p {
-			margin-top: 4px;
-			&:last-child {
-				font-weight: inherit;
-			}
-		}
-		// Extra Info
 		time {
 			display: none;
-		}
-		span {
-			font-weight: inherit;
 		}
 		span, span a, p:last-child {
 			font-size: 13px;
@@ -542,15 +584,38 @@ div[role="main"] .widget {
 // Dividing Line
 
 hr.line {
-	background-color: lighten(@color-swatch5, 35%);
+	background-color: lighten(@color-swatch5, 65%);
+}
+
+
+// Blockquote
+
+blockquote {
+	border-left: 5px solid lighten(@color-swatch2, 10%);
+	font-size: @font-swatch9-font-size;
+	line-height: @font-swatch9-line-height;
+	margin-left: 0;
+	padding: 35px 35px 30px 55px;
+	&:before {
+		color: lighten(@color-swatch2, 40%);
+		font-size: 55px;
+		content: open-quote;
+		left: 18px;
+		top: 35px;
+	}
+}
+
+
+// Facebook Comments (Responsive)
+
+.fb_iframe_widget_fluid span, .fb_iframe_widget iframe {
+    width: 100%!important;
 }
 
 
 // Yelp
 
 .widget.yelpreview {
-	background-color: lighten(@color-swatch5, 45%);
-	padding: 24px 25px 15px;
 	ul {
 		padding-bottom: 0;
 	}

@@ -1,0 +1,24 @@
+<footer class="bk-footer">
+	<div class="container">
+		<div class="row">
+			<div class="span-6">
+				{{widget('content', 'footer-header1', {content: '<h3>This is a content widget.</h3>', lines: 'all'})|raw}}
+				{{widget('content', 'footer-content1', {content: '<p>This is a content widget.</p>', lines: 'all'})|raw}}
+			</div><!--end span-6-->
+			<div class="span-6">
+				{{widget('content', 'footer-header2', {content: '<h3>This is a content widget.</h3>', lines: 'all'})|raw}}
+				{{widget('content', 'footer-content2', {content: '<p>This is a content widget.</p>', lines: 'all'})|raw}}
+			</div><!--end span-6-->
+		</div><!--end row-->
+	</div><!--end container-->
+</footer>
+
+<div class="copyright">
+	<div class="container">
+		<div class="row">
+			<div class="span-12">
+				{{widget('profile', 'footer-copyright', { 'profileType':'copyright', 'copyright':'profile'})|raw}}
+			</div><!--end span-12-->
+		</div><!--end row-->
+	</div><!--end container-->
+</div><!--end copyright-->
