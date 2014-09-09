@@ -1,4 +1,16 @@
 <!-- Header Include !-->
 
+<div id="wrap">
 
-	
+	<nav class="bk-nav" id="#bk-nav">
+		<div class="container">
+			<div class="row">
+				{{widget('extendednavigation', 'header-navigation', {"align":"left"})|raw}}
+			</div><!--end row-->
+		</div><!--end container-->
+	</nav><!--end bk-nav-->
+
+	<header class="bk-header">
+		{{widget('logo', 'logo', {"defaultlogo": asset('images/nordic-logo.png'),"showTplWidget":"0"})|raw}}
+		{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+	</header>
