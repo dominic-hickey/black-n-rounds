@@ -46,8 +46,7 @@
     },
     "images":[
         "images/feature-bg.jpg",
-        "images/feature-bg-2.jpg",
-        "images/feature-bg-3.jpg"
+        "images/feature-bg-2.jpg"
     ],
     "fontSwatch": {
        "title": "Abril / Open Sans",

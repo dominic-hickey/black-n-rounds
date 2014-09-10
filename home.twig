@@ -2,7 +2,6 @@
 {% block content %}
 
 <div id="wrap">
-	<div class="bk-feature">
 
 	<nav class="bk-nav" id="#bk-nav">
 		<div class="container">
@@ -25,8 +24,7 @@
 			'crop': true,
 			'images': [
 				{'imageHeight':'auto', 'imageWidth':'100%', 'url':asset('images/feature-bg.jpg'), 'title':'The Quest', 'description': 'To the west side of the bridge'},
-				{'imageHeight':'auto', 'imageWidth':'100%', 'url':asset('images/feature-bg-2.jpg'), 'title':'The Quest', 'description': 'To the west side of the bridge'},
-				{'imageHeight':'auto', 'imageWidth':'100%', 'url':asset('images/feature-bg-3.jpg'), 'title':'The Quest', 'description': 'To the west side of the bridge'}
+				{'imageHeight':'auto', 'imageWidth':'100%', 'url':asset('images/feature-bg-2.jpg'), 'title':'The Quest', 'description': 'To the west side of the bridge'}
 			]
 		})|raw
 	}}
@@ -35,8 +33,6 @@
 		{{widget('logo', 'logo', {"defaultlogo": asset('images/nordic-logo.png'),"showTplWidget":"0"})|raw}}
 		{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
 	</header>
-
-</div><!--end bk-feature-->
 
 	<div role="main">
 		<div class="container">
