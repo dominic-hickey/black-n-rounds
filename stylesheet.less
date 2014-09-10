@@ -49,6 +49,10 @@ body {
 		font-size: @font-swatch8-font-size;
 		line-height: @font-swatch8-line-height;
 		padding-bottom: 10px;
+		@media @mobile {
+			font-size: bk-scale(@font-swatch8-font-size, 0.75);
+			font-size: bk-scale(@font-swatch8-line-height, 0.8);
+		}
 	}
 	.description {
 		color: fade(@font-swatch9-color, 70%);
@@ -56,6 +60,10 @@ body {
 		font-size: @font-swatch9-font-size;
 		font-weight: @font-swatch9-font-weight;
 		line-height: @font-swatch9-line-height;
+		@media @mobile {
+			font-size: bk-scale(@font-swatch9-font-size, 0.75);
+			font-size: bk-scale(@font-swatch9-line-height, 0.8);
+		}
 	}
 	.content-wrapper {
 		height: 100%;
@@ -205,6 +213,7 @@ body {
             margin: 0 20px;
             padding: 10px 0;
             cursor: pointer;
+            width: auto;
             &:before {
 	            display: inline-block;
 	            text-decoration: inherit;
@@ -284,7 +293,7 @@ body {
 		padding: 10px 8px;
 		position: fixed;
 		right: 20px;
-		top: 78px; 
+		top: 35px; 
 		display: block;
 		width: @pull-icon-size;
 		height: @pull-icon-size;
