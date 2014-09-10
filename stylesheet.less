@@ -42,6 +42,7 @@ body {
 .widget.responsiveslideshow {
 	.title, .description {
 		display: block!important;
+		padding: 17px 45px 0 35px;
 	}
 	.title {
 		color: @font-swatch8-color;
@@ -61,8 +62,8 @@ body {
 		font-weight: @font-swatch9-font-weight;
 		line-height: @font-swatch9-line-height;
 		@media @mobile {
-			font-size: bkscale(@font-swatch9-font-size, 0.65);
-			line-height: bkscale(@font-swatch9-line-height, 0.7);
+			font-size: bkscale(@font-swatch9-font-size, 0.75);
+			line-height: bkscale(@font-swatch9-line-height, 0.8);
 		}
 	}
 	.content-wrapper {
@@ -193,6 +194,7 @@ div[role="main"] {
 
 .bk-nav {
 	background: fade(@color-swatch1, 80%);
+	border-left: 1px solid fade(@color-swatch4, 3.5%);
 	height: 100%;
 	position: fixed;
 	right: -325px;
@@ -222,7 +224,7 @@ div[role="main"] {
         	display: block;
         }
         li {
-        	border-bottom: 1px solid lighten(@color-swatch5, 45%);
+        	border-bottom: 1px solid lighten(@color-swatch5, 60%);
             display: block;
             margin: 0 20px;
             padding: 10px 0;
@@ -251,19 +253,26 @@ div[role="main"] {
             		margin-top: 0;
             		width: 90%;
             		li {
+            			border: none;
             			padding: 0;
             			margin: 0;
-            			&:first-child {
-            		
+            			&:first-child a {
+            				margin-top: 6px;
             			}
             			&:last-child {
             				
             			}
             			a {
-            				padding: 0;
+            				padding: 8px 0;
+            				&:before {
+            					content: "-";
+            					display: inline-block;
+            					padding: 0;
+            				}
             			}
             		}
             		.text {
+            			display: inline;
             			font-size: bkscale(@font-swatch6-font-size, 0.90);
             		}
             	}
@@ -411,8 +420,10 @@ div[role="main"] {
 .bk-footer {
 	border-top: 1px solid lighten(@color-swatch5, 60%);
 	padding: 60px 20px;
-	.span-6:last-child {	
-		margin-top: 15px;
+	.span-6:last-child {
+		@media @mobile {	
+			margin-top: 15px;
+		}
 	}
 	@media @tablet { 
 		padding: 40px 20px;
