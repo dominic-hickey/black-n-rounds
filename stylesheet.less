@@ -124,8 +124,11 @@ body {
 	@media @tablet {
 		padding: 35px 20px;
 	}
+}
+
+.bk-pt-home {
 	.widget.extendednavigation a.pull {
-		top: 65px;
+		
 	}
 }
 
@@ -186,7 +189,7 @@ body {
 .widget.extendednavigation {
 	float: left;
 	width: 100%;
-	z-index: 9999;
+	z-index: 999;
     ul {
         display: block;
         margin-top: 100px;
@@ -289,6 +292,7 @@ body {
 		cursor: pointer;
 		outline: none;
 		.transition( all, 0.5s, ease);
+		z-index: 9999;
 	    &:hover {
 	    	background-color: lighten(@color-swatch4, 25%);
 	    	.transition( all, 0.5s, ease);

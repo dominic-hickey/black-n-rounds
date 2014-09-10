@@ -1,7 +1,7 @@
 {% extends "layout.twig" %}
 {% block content %}
 
-<div id="wrap">
+<div id="wrap" class="bk-pt-home">
 
 	<nav class="bk-nav" id="#bk-nav">
 		<div class="container">
@@ -30,7 +30,7 @@
 	}}
 
 	<header class="bk-header">
-		{{widget('logo', 'logo', {"defaultlogo": asset('images/nordic-logo.png'),"showTplWidget":"0"})|raw}}
+		{{widget('logo', 'logo', {"defaultlogo": asset('images/quest-logo.png'),"showTplWidget":"0"})|raw}}
 		{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
 	</header>
 
