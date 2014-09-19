@@ -160,21 +160,20 @@
             background-color: darken(@color-swatch1,4%);
             -webkit-appearance: none;
             -moz-appearance: none;
-            @media @tablet {
+            @media @mobile {
                 width: 100%;
-                max-width: 100%;
             }
         }
         .btn {
-            border-radius: 0 50px 50px 0;
+            border-radius: 4px;
             height: 40px;
             position: relative;
             margin: 0;
-            left: -5px;
             padding: 4px 14px;
             margin-top: 5px;
-            @media @tablet {
-                top: 0;
+            @media @mobile {
+                margin: 20px 0 10px;
+                width: 100%;
             }
         }
     }
@@ -185,7 +184,7 @@
 .productlist-item-count {
     font-family: @font-swatch4-font-family;
     font-size: 14px;
-    font-weight: @font-swatch4-font-weight;
+    font-weight: inherit;
     line-height: @font-swatch4-line-height;
     letter-spacing: @font-swatch4-letter-spacing;
     color: @color-swatch5;

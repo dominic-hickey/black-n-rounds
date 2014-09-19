@@ -153,12 +153,15 @@ button {
 		}
 	}
 	button.btn {
-		background-color: @color-swatch4;
+		background-color: @font-swatch7-background-color;
 		background-image: image('/images/email-submit-icon.png');
 		padding: 12px 16px 12px 48px;
 		background-position: 15px center;
 		background-repeat: no-repeat;
 		background-size: 21px;
+		&:hover {
+			background-color: @font-swatch7-background-color-hover;
+		}
 	}
 }
 
@@ -185,11 +188,15 @@ button {
 	border: 1px solid lighten(@color-swatch5, 50%);
 	.border-radius(4px);
 	font-size: bkscale(@font-swatch5-font-size, 0.95);
+	margin-right: 2%;
 }
 
 .widget.signupform fieldset button.btn {
+	max-width: 18%;
+	width: 100%;
 	@media @mobile {
-		left: 0;
+		margin-top: 20px;
+		max-width: 100%;
 	}
 } 
 
@@ -509,6 +516,36 @@ div[role="main"] .widget {
 	@media @mobile {
 		height: 230px;
 		min-height: 250px;
+	}
+}
+
+div[role="main"] {
+	.widget.responsiveslideshow, .slideshow-widget-wrapper, .widget.responsiveslideshow .slideshow-widget, .widget.responsiveslideshow .slideshow-image-list {
+		min-height: auto;
+		height: auto;
+	}
+	.widget.responsiveslideshow {
+		.title {
+			font-size: bkscale(@font-swatch8-font-size, 0.75);
+			line-height: bkscale(@font-swatch8-line-height, 0.8);
+		}
+		.description {
+			font-size: bkscale(@font-swatch9-font-size, 0.85);
+			line-height: bkscale(@font-swatch9-line-height, 0.9);
+		}
+	}
+}
+
+div[role="main"] {
+	.slideshow-widget-controls {
+		bottom: 25px;
+		top: initial;
+		right: 0;
+		left: 0;
+		margin: 0 auto;
+	}
+	.widget.responsiveslideshow .slideshow-widget-controls .dot {
+		display: inline-block;
 	}
 }
 
