@@ -5,7 +5,7 @@
 
 
 .widget.ecomfeaturedproducts .ecom-featuredproducts-wrap .ecom-featuredproducts-product .ecom-featuredproducts-image-wrap {
-    background-color: darken(@color-swatch1,3%);
+    background-color: darken(@color-swatch1, 3%);
 }
 
 .widget.ecomproductslist,
@@ -34,7 +34,7 @@
         .ecom-productslist-image-wrap,
         .ecom-featuredproducts-image-wrap {
             margin-bottom: 1em;
-            background-color: darken(@color-swatch1,3%);
+            background-color: darken(@color-swatch1, 3%);
         }
         a:hover {
             text-decoration: none;
@@ -45,7 +45,7 @@
 
     .productlist-pagination {
         margin-left: 3%;
-        border-top: 1px solid darken(@color-swatch1,7%);
+        border-top: 1px solid darken(@color-swatch1, 7%);
         padding-top: 1em;
         margin-top: 3em;
     }
@@ -90,7 +90,6 @@
 
 
 // Select Boxes
-// -----------------------------
 
 
 .productlist-filter,
@@ -102,8 +101,8 @@
         margin-top: 5px;
         margin-bottom: 12px;
         padding: 8px 33px 8px 8px;
-        border: 1px solid darken(@color-swatch1,10%);
-        background-color: darken(@color-swatch1,4%);
+        border: 1px solid darken(@color-swatch1, 10%);
+        background-color: darken(@color-swatch1, 4%);
         color: @color-swatch5;
         cursor: pointer;
         &:focus {
@@ -117,11 +116,10 @@
 
 
 // Product Filter
-// -----------------------------
 
 
 .widget.ecomproductslist .productlist-filter .productlist-display-form .form-group {
-    @media (max-width: 1060px) {
+    @media only screen and (max-width: 1060px) {
         margin-bottom: 0;
     }
 }
@@ -193,8 +191,9 @@
     }
 }
 
+
 // Basket
-// -----------------------------
+
 
 .widget.ecombasket {
     margin-bottom: 2em;
@@ -308,7 +307,6 @@
 
 
 // Single Product
-// -----------------------------
 
 
 .widget.ecomproduct .ecom-product {
@@ -427,13 +425,13 @@
 
     .image-wrap {
         background-position: -10000%;
-        @media (max-width: 530px) {
+        @media only screen and (max-width: 530px) {
             max-width: 130px;
             img {
                 max-width: 100%!important;
             }
         }
-        @media (max-width: 360px) { 
+        @media only screen and (max-width: 360px) {
             max-width: 100%;
         }
     }
@@ -547,7 +545,7 @@
                 left: 20px;
                 text-align: left;
                 &:last-child {
-                    @media (max-width: 360px) {
+                    @media only screen and (max-width: 360px) {
                         display: none;
                     }
                 }
@@ -562,7 +560,7 @@
 
         tr td {
             border-bottom: 1px solid darken(@color-swatch1,10%);
-            @media (max-width: 360px) {
+            @media only screen and (max-width: 360px) {
                 display: table;
                 width: 100%;
                 border-bottom: 0;
@@ -573,7 +571,7 @@
                 vertical-align: top;
             }
             &:nth-child(2) {
-                @media (max-width: 530px) {
+                @media only screen and (max-width: 530px) {
                     padding-left: 0;
                 }
             }
@@ -586,19 +584,19 @@
             // Responsive
 
             &:nth-child(1) {
-                @media (max-width: 360px) {
+                @media only screen and (max-width: 360px) {
                     padding-bottom: 0;
                 }
             }
             &:nth-child(2),
             &:nth-child(3) {
-                @media (max-width: 360px) {
+                @media only screen and (max-width: 360px) {
                     padding: 0 20px 0;
                     border-left: 0;
                 }
             }
             &:last-child {
-                @media (max-width: 360px) {
+                @media only screen and (max-width: 360px) {
                     padding: 6px 20px;
                     margin: 20px 0 0;
                     border-bottom: 1px solid darken(@color-swatch1,10%);
@@ -607,7 +605,7 @@
             }
         }
         tr:last-child td:last-child {
-            @media (max-width: 360px) {
+            @media only screen and (max-width: 360px) {
                 border-top: 0;
                 margin-top: 0;
                 padding-top: 0;
