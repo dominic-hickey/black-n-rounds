@@ -1,0 +1,623 @@
+
+// -----------------------------
+// Buttons
+// -----------------------------
+
+
+button.btn,
+.signupform fieldset button,
+.contactform button.btn,
+.widget.profile form button,
+.widget.paypalbuynow .widget.button.paypal,
+.widget.ecomcheckout .checkout-order-button,
+.widget.tweet a,
+.widget.dropbox button,
+.blog-search-submit-button,
+.widget.ecombasket .ecombasket-list-container .ecombasket-checkout-wrap .ecombasket-checkout-link,
+.widget.ecombasket .ecombasket-list-container ul li .ecombasket-item-info .ecombasket-remove-button,
+.blog-search-submit-button,
+.ecombasket-summary-link,
+.basket-summary-empty-cta,
+.ecombasket-remove-button,
+.widget.dropbox .file-name,
+.productlist-filter .productlist-search .btn  {
+	background-color: @font-swatch7-background-color;
+	color: @font-swatch7-color;
+	font-family: @font-swatch7-font-family;
+	font-size: @font-swatch7-font-size;
+	font-weight:  @font-swatch7-font-weight;
+	line-height: @font-swatch7-line-height;
+	letter-spacing: @font-swatch7-letter-spacing;
+	padding: 12px 16px;
+	.border-radius(40px);
+	display: inline-block;
+	cursor: pointer;
+	margin: 0;
+	text-decoration: none;
+	vertical-align: top;
+	&:hover {
+		color: @color-swatch1;
+		text-decoration: none;
+		background-color: @font-swatch7-background-color-hover;
+		.transition(background-color, .5s, ease-in);
+	}
+}
+
+.basket-summary-empty-cta,
+.ecombasket-summary-link {
+	display: inline-block;
+}
+
+.widget.clicktocall a {
+	.border-radius(50px);
+	font-weight: 600;
+	&:hover {
+		.transition(all, .5s, ease-in);
+	}
+}
+
+.widget.ecomcheckout .checkout-order-button:disabled,
+button:disabled {
+	background-color: fadeout(@font-swatch7-background-color, 50%);
+	cursor: not-allowed;
+	&:hover {
+		background-color: fadeout(@font-swatch7-background-color, 50%);
+	}
+}
+
+button {
+	outline: none;
+}
+
+.blog-search-submit-button {
+	border: none;
+}
+
+.widget.paypalbuynow .widget.button.paypal,
+.widget.tweet a,
+.widget.dropbox button {
+	padding-left: 40px;
+}
+
+.widget.dropbox .file-name, .widget.dropbox .file-name:hover {
+	background: transparent;
+	color: @color-swatch4;
+	padding-left: 8px;
+}
+
+
+
+// -----------------------------
+// Forms
+// -----------------------------
+
+
+// Single Input Forms
+
+.widget {
+	&.profile, &.signupform, &.blogsearch {
+		form fieldset input, form input, input, button, button.btn {
+			border: 1px solid darken(@font-swatch7-background-color, 5%);
+			padding-left: 15px;
+			padding-right: 15px;
+			position: relative;
+			height: 50px;
+		}
+		form fieldset input, form input, input {
+			margin-right: 15px;
+		}
+	}
+}
+
+
+// Contact Form
+
+.widget.contactform {
+	label {
+		text-indent: -9999em;
+		overflow: hidden;
+		height: 0;
+	}
+	input, textarea {
+		background-color: lighten(@color-swatch5, 65%);
+		border: 1px solid lighten(@color-swatch5, 58%);
+		color: @color-swatch4;
+		font-size: @font-swatch5-font-size;
+		outline; none;
+		margin-bottom: 20px;
+		padding: 15px;
+		-webkit-appearance: none;
+	    -moz-appearance: none;
+	    appearance: none;
+	    .transition(all, .25s, ease-out);
+	    &:focus {
+	    	border: 1px solid lighten(@color-swatch5, 50%);
+	    	color: @color-swatch4;
+	    }
+	}
+	input:before {
+		background-image: image('/images/email-submit-icon.png');
+		background-size: 30px 30px;
+		background-position: 11px 8px;
+		background-repeat: no-repeat;
+		content: "";
+		display: inline-block;
+	}
+	textarea {
+		&:before {
+			background-image: image('/images/email-submit-icon.png');
+			background-size: 30px 30px;
+			background-position: 11px 8px;
+			background-repeat: no-repeat;
+			content: "";
+			display: inline-block;
+		}
+	}
+	button.btn {
+		background-color: @font-swatch7-background-color;
+		background-image: image('/images/email-submit-icon.png');
+		padding: 12px 16px 12px 48px;
+		background-position: 15px center;
+		background-repeat: no-repeat;
+		background-size: 21px;
+		&:hover {
+			background-color: @font-swatch7-background-color-hover;
+		}
+	}
+}
+
+
+// Profile Form
+
+.widget.profile form fieldset input {
+	background-color: @color-swatch1;
+	border: 1px solid lighten(@color-swatch5, 50%);
+	font-size: bkscale(@font-swatch5-font-size, 0.95);
+}
+
+.widget.profile form fieldset button.btn {
+	@media @mobile {
+		left: 0;
+	}
+} 
+
+
+// Signup Form
+
+.widget.signupform form fieldset input {
+	background-color: @color-swatch1;
+	border: 1px solid lighten(@color-swatch5, 50%);
+	.border-radius(4px);
+	font-size: bkscale(@font-swatch5-font-size, 0.95);
+	margin-right: 2%;
+}
+
+.widget.signupform fieldset button.btn {
+	max-width: 18%;
+	width: 100%;
+	@media @mobile {
+		margin-top: 20px;
+		max-width: 100%;
+	}
+} 
+
+
+// Blog Search Form
+
+.widget.blogsearch form label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.widget.blogsearch form input {
+	background-color: @color-swatch1;
+	border: 1px solid lighten(@color-swatch5, 50%);
+	.border-radius(4px);
+	font-size: bkscale(@font-swatch5-font-size, 0.95);
+	margin: 0 15px 8px 0;
+}
+
+
+// Inputs + Button
+
+.widget.profile form fieldset input, .widget.signupform form fieldset input, .widget.blogsearch form input {
+	width: 80%;
+	@media @mobile {
+		width: 100%;
+	}
+	+ button, button.btn {
+		max-width: 20%;
+		@media @mobile {
+			margin-top: 15px;
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+}
+
+// Placeholder text
+
+::-webkit-input-placeholder {
+  color: darken(white, 30%);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: darken(white, 30%);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: darken(white, 30%);
+}
+
+:-ms-input-placeholder {  
+  color: darken(white, 30%);
+}
+
+
+// -----------------------------
+// Social Icons
+// -----------------------------
+
+
+.widget.socialicons span a, .widget.socialicons span a:hover, .widget.profile .bk-profile-socialicons span a, .widget.profile .bk-profile-socialicons span a:hover {
+	background-color: transparent;
+	background-size: 20px;
+	border: 1px solid fade(@color-swatch3, 50%);
+	.border-radius(50px);
+	color: @color-swatch3;
+	height: 46px;
+	width: 46px;
+	@media @mobile {
+		background-size: 18px;
+		height: 42px;
+		width: 42px;
+	}
+}
+
+.widget.socialicons span a:hover, .widget.profile .bk-profile-socialicons span a:hover {
+	background-size: 20px;
+}
+
+.svg {
+	.bk-socialicons-linkedin a {
+		background-image: image('/images/icons/linkedin.svg');
+		&:hover {
+			background-image: image('/images/icons/linkedin-hover.svg');
+		}
+	}
+	.bk-socialicons-twitter a {
+		background-image: image('/images/icons/twitter.svg');
+		&:hover {
+			background-image: image('/images/icons/twitter-hover.svg');
+		}
+	}
+	.bk-socialicons-facebook a {
+		background-image: image('/images/icons/facebook.svg');
+		&:hover {
+			background-image: image('/images/icons/facebook-hover.svg');
+		}
+	}
+	.bk-socialicons-rss a {
+		background-image: image('/images/icons/rss.svg');
+		&:hover {
+			background-image: image('/images/icons/rss-hover.svg');
+		}
+	}
+	.bk-socialicons-googleplus a {
+		background-image: image('/images/icons/googleplus.svg');
+		&:hover {
+			background-image: image('/images/icons/googleplus-hover.svg');
+		}
+	}
+	.bk-socialicons-youtube a {
+		background-image: image('/images/icons/youtube.svg');
+		&:hover {
+			background-image: image('/images/icons/youtube-hover.svg');
+		}
+	}
+}
+
+.bk-socialicons-linkedin a {
+	background-image: image('/images/icons/linkedin.png');
+}
+.bk-socialicons-twitter a {
+	background-image: image('/images/icons/twitter.png');
+}
+.bk-socialicons-facebook a {
+	background-image: image('/images/icons/facebook.png');
+}
+.bk-socialicons-rss a {
+	background-image: image('/images/icons/rss.png');
+}
+.bk-socialicons-googleplus a {
+	background-image: image('/images/icons/googleplus.png');
+}
+.bk-socialicons-youtube a {
+	background-image: image('/images/icons/youtube.png');
+}
+
+
+// -----------------------------
+// General Widgets
+// -----------------------------
+
+
+div[role="main"] .widget {
+	margin-bottom: 10px;
+}
+
+
+// Gallery
+
+.widget.gallery {
+	margin: 20px 0 20px -0.5%;
+	ul li {
+		@media @tablet {
+			width: 50%;
+			padding-bottom: 50%;
+		}
+		@media @mobile {
+			width: 100%;
+			padding-bottom: 100%;
+		}
+		span.image-data {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		span.image-data:hover {
+			background-color: fade(@color-swatch4, 80%);
+			padding: 25px;
+			.transition(all, 0.25s, ease-in);
+			.title {
+				opacity: 1;
+				color: #fff;
+				-webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+				transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+			}
+			.description {
+				opacity: 1;
+				-webkit-transform: translate3d(0,0,0);
+				transform: translate3d(0,0,0);
+			}
+		}
+		span.inner {
+			.title,
+			.description {
+				color: @color-swatch1;
+				display: block;
+				font-family: @font-swatch4-font-family;
+				letter-spacing: @font-swatch4-letter-spacing;
+				opacity: 0;
+				text-align: center;
+				width: 100%;
+			}
+			.title {
+				position: absolute;
+				top: 60%;
+				left: 0;
+				font-size: 19px;
+				font-weight: 600;
+				line-height: 26px;
+				-webkit-transition: -webkit-transform 0.35s, color 0.35s;
+				transition: transform 0.35s, color 0.35s;
+				-webkit-transform: translate3d(0,-50%,0);
+				transform: translate3d(0,-50%,0);
+				&:after {
+					content: "";
+					display: block;
+					border: 1px solid fade(@color-swatch1, 25%);
+					margin: 19px auto 5px;
+					width: 15%;
+				}
+			}
+			.description {
+				padding: 20px 20px 30px 20px;
+				font-size: 16px;
+				line-height: 20px;
+				-webkit-transform: translate3d(0,10px,0);
+				transform: translate3d(0,10px,0);
+				webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+				transition: opacity 0.35s, transform 0.35s;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+		}
+	}
+	.image-data {
+		padding: 30px;
+		display: block;
+		opacity: 0;
+		.transition(all, 0.5s, ease-out);
+		&:hover {
+			background-color: fade(@color-swatch4, 80%);
+			opacity: 1;
+		}
+	}
+}
+
+// Slideshow
+
+.widget.responsiveslideshow {
+	.btn-play, &:hover span.btn-play, 
+	.title, .description {
+		display: none;
+	}
+	.slideshow-widget {
+		.btns-move {
+			.btn-prev {
+				left: 0;
+				height: 65px;
+				width: 45px;
+				background-image: image('/images/arrow-prev.png');
+				background-color: @color-swatch1;
+				background-position: center;
+				background-repeat: no-repeat;
+				color: transparent;
+				&:hover {
+					background-image: image('/images/arrow-prev-hov.png');
+					background-color: @color-swatch2;
+					background-position: center;
+					background-repeat: no-repeat;
+				}
+			}
+			.btn-next {
+				right: 0;
+				height: 65px;
+				width: 45px;
+				background-image: image('/images/arrow-next.png');
+				background-color: @color-swatch1;
+				background-position: center;
+				background-repeat: no-repeat;
+				color: transparent;
+				&:hover {
+					background-image: image('/images/arrow-next-hov.png');
+					background-color: @color-swatch2;
+					background-position: center;
+					background-repeat: no-repeat;
+				}
+			}
+			@media @mobile {
+				.btn-next,
+				.btn-prev {
+					width: 35px;
+					height: 40px;
+					background-size: 12px;
+					&:hover {
+						background-size: 12px;
+					}
+				}
+			}
+		}
+	}
+	.slideshow-widget-controls {
+		margin-top: 0;
+		.dot {
+			.border-radius(50px);
+			display: inline-block;
+			width: 12px;
+			height: 12px;
+			background-color: transparent;
+			border: 1px solid fade(@color-swatch2, 75%);
+			margin-top: 8px;
+			&.selected {
+				background-color: @color-swatch2;
+				border: 1px solid @color-swatch2;
+			} 
+			&:hover {
+				background-color: @color-swatch2;
+				border: 1px solid @color-swatch2;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.widget.responsiveslideshow .slideshow-image-list,
+.widget.responsiveslideshow .slideshow-widget {
+	@media @mobile {
+		height: 230px;
+		min-height: 250px;
+	}
+}
+
+div[role="main"] {
+	.widget.responsiveslideshow, .slideshow-widget-wrapper, .widget.responsiveslideshow .slideshow-widget, .widget.responsiveslideshow .slideshow-image-list {
+		min-height: auto;
+		height: auto;
+	}
+	.widget.responsiveslideshow {
+		.title {
+			font-size: bkscale(@font-swatch8-font-size, 0.75);
+			line-height: bkscale(@font-swatch8-line-height, 0.8);
+		}
+		.description {
+			font-size: bkscale(@font-swatch9-font-size, 0.85);
+			line-height: bkscale(@font-swatch9-line-height, 0.9);
+		}
+	}
+	.widget.responsiveslideshow span.inner img {
+		display: initial;
+	}
+}
+
+div[role="main"] {
+	.slideshow-widget-controls {
+		bottom: 25px;
+		top: initial;
+		right: 0;
+		left: 0;
+		margin: 0 auto;
+	}
+	.widget.responsiveslideshow .slideshow-widget-controls .dot {
+		display: inline-block;
+	}
+}
+
+// Twitter
+
+.widget.twitter {
+	margin: 20px 0;
+	img {
+		.border-radius(100px);
+		margin-top: 4px;
+	}
+	li {
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+	ul li a:hover {
+		text-decoration: none;
+	}
+	.twitter-profile-pic {
+		float: none;
+		display: inline-block;
+		vertical-align: top;
+		width: 12%;
+		margin-right: 2%;
+		@media @tablet {
+			width: 100%;
+			margin-right: 0;
+		}
+	}
+	.twitter-content {
+		float: none;
+		display: inline-block;
+		width: 85%;
+		.bk-full-name {
+			display: block;
+			color: @font-swatch4-color;
+			font-family: @font-swatch4-font-family;
+			font-size: @font-swatch5-font-size;
+			font-weight: @font-swatch4-font-weight;
+			line-height: @font-swatch4-line-height;
+			letter-spacing: @font-swatch4-letter-spacing;
+			margin-bottom: 4px;
+		}
+		p, p a, span, span a {
+			color: @font-swatch5-color;
+			font-family: @font-swatch5-font-family;
+			font-size: @font-swatch5-font-size;
+			font-weight: @font-swatch5-font-weight;
+			line-height: @font-swatch5-line-height;
+			letter-spacing: @font-swatch5-letter-spacing;
+		}
+		p a, span a {
+			text-decoration: none;
+			&:hover {
+				color: @color-swatch2;
+				text-decoration: none;
+			}
+		}
+		time {
+			display: none;
+		}
+		span, span a, p:last-child {
+			font-size: 13px;
+		}
+	}
+}
