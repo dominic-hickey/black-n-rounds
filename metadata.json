@@ -1,7 +1,7 @@
 {
-    "name":"Nordic",
-    "thumbnail":"nordic.png",
-    "screenshot":"nordic.png",
+    "name":"Quest",
+    "thumbnail":"quest.png",
+    "screenshot":"quest.png",
     "templateType":"standard",
     "pageTypes": ["home"],
     "tags": {
