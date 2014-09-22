@@ -373,13 +373,9 @@ div[role="main"] .widget {
 			.title {
 				opacity: 1;
 				color: #fff;
-				-webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
-				transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
 			}
 			.description {
 				opacity: 1;
-				-webkit-transform: translate3d(0,0,0);
-				transform: translate3d(0,0,0);
 			}
 		}
 		span.inner {
@@ -395,15 +391,13 @@ div[role="main"] .widget {
 			}
 			.title {
 				position: absolute;
-				top: 60%;
+				top: 48%;
 				left: 0;
 				font-size: 19px;
 				font-weight: 600;
 				line-height: 26px;
-				-webkit-transition: -webkit-transform 0.35s, color 0.35s;
-				transition: transform 0.35s, color 0.35s;
-				-webkit-transform: translate3d(0,-50%,0);
-				transform: translate3d(0,-50%,0);
+				-webkit-transition: color 0.35s ease-in-out 0.35s;
+				transition: color 0.35s ease-in-out 0.35s;
 				&:after {
 					content: "";
 					display: block;
@@ -416,10 +410,8 @@ div[role="main"] .widget {
 				padding: 20px 20px 30px 20px;
 				font-size: 16px;
 				line-height: 20px;
-				-webkit-transform: translate3d(0,10px,0);
-				transform: translate3d(0,10px,0);
-				webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-				transition: opacity 0.35s, transform 0.35s;
+				-webkit-transition: opacity 0.35s ease-in-out 0.35s;
+				transition: opacity 0.35s ease-in-out 0.35s;
 				position: absolute;
 				bottom: 0;
 				left: 0;
