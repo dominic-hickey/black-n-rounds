@@ -179,7 +179,7 @@ body {
 	position: fixed;
 	right: -325px;
 	width: 325px;
-	.transition( all, 0.5s, ease);
+	.transition(all, 0.5s, ease);
     z-index: 9999;
 	@media only screen and (max-height: 450px) {
 		height: auto;
@@ -252,9 +252,6 @@ body {
             			&:first-child a {
             				margin-top: 6px;
             			}
-            			&:last-child {
-            				
-            			}
             			a {
             				padding: 8px 0;
             				&:before {
@@ -301,9 +298,6 @@ body {
 
     // Ivans Cross Navigation Icon
 
-    @pull-icon-size: 42px;
-	@pull-icon-hamburger-size: 24px;
-
 	a.pull {
 		background-color: @color-swatch4;
 		padding: 10px 8px;
@@ -311,26 +305,26 @@ body {
 		right: 20px;
 		top: 35px; 
 		display: block;
-		width: @pull-icon-size;
-		height: @pull-icon-size;
+		width: 42px;
+		height: 42px;
 		overflow: hidden;
 		cursor: pointer;
 		outline: none;
-		.transition( all, 0.5s, ease);
+		.transition(all, 0.5s, ease);
 		z-index: 9999;
 	    &:hover {
 	    	background-color: lighten(@color-swatch4, 25%);
-	    	.transition( all, 0.5s, ease);
+	    	.transition(all, 0.5s, ease);
 	    }
 		&:after, &:before {
             content: '';
             position: absolute;
-            width: @pull-icon-hamburger-size;
+            width: 24px;
             height: 3px;
             background: @color-swatch1;
             top: 50%;
             left: 50%;
-            margin: -(@pull-icon-hamburger-size / 2.65) 0 0 -(@pull-icon-hamburger-size / 2);
+            margin: -9px 0 0 -12px;
             box-shadow: 0 8px 0 @color-swatch1, 0 16px 0 @color-swatch1;
         }
         &:before {
@@ -343,7 +337,7 @@ body {
 	ul[style*="display: block"] + a.pull, ul.open + a.pull {
 	 	&:after, &:before {
 	 		  box-shadow: none;
-	 		  margin: -(@pull-icon-hamburger-size / 11) 0 0 -(@pull-icon-hamburger-size / 2);
+	 		  margin: -2px 0 0 -12px;
 	 	}
 	 	&:after {
             -webkit-transform: rotate(45deg);
