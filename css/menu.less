@@ -6,7 +6,7 @@
 // Menu Sections
 
 .widget.menusections {
-	margin: 0 0 30px;
+	margin: 10px 0 0;
 	ul {
 		padding: 1em!important;
 		text-align: center;
@@ -18,7 +18,12 @@
 		}
 	}
 	a {
-		color: @color-swatch4;
+		.border-radius(25px);
+		background-color: @font-swatch7-background-color;
+		color: @font-swatch6-color;
+		display: inline-block;
+		margin-bottom: 6px 0;
+		padding: 8px 15px;
 		&:hover {
 			color: @color-swatch2;
 			text-decoration: none;
@@ -31,6 +36,9 @@
 
 .menu-header {
 	padding: 2em 0;
+	@media @mobile {
+		padding: 1em 0;fmenu
+	}
 }
 
 // Main Menu

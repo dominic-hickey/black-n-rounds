@@ -159,6 +159,7 @@
             -webkit-appearance: none;
             -moz-appearance: none;
             @media @mobile {
+                margin-bottom: 15px;
                 width: 100%;
             }
         }
@@ -166,7 +167,7 @@
             border-radius: 4px;
             height: 40px;
             position: relative;
-            margin: 0;
+            margin: 5px 0 0;
             padding: 4px 14px;
             margin-top: 5px;
             @media @mobile {
@@ -294,8 +295,12 @@
     // Remove Button
 
     .ecombasket-remove-button {
+        border: 0;
+        outline: 0;
+        font-size: 12px!important;
+        height: 30px;
+        line-height: 0!important; 
         position: relative;
-        top: 10px;
         float: right;
         text-decoration: none!important;
     }
