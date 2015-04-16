@@ -1,26 +1,63 @@
-	<footer class="bk-footer">
-		<div class="container">
-			<div class="row">
-				<div class="span-6">
-					{{widget('content', 'footer-header1', {content: '<h3>Lorem ipsum dolor sit amet.</h3>', lines: 'all'})|raw}}
-					{{widget('content', 'footer-content1', {content: '<p>Consectetur adipiscing elit.</p>', lines: 'all'})|raw}}
-				</div><!--end span-6-->
-				<div class="span-6">
-					{{widget('content', 'footer-header2', {content: '<h3>Lorem ipsum dolor sit amet.</h3>', lines: 'all'})|raw}}
-					{{widget('content', 'footer-content2', {content: '<p>Consectetur adipiscing elit.</p>', lines: 'all'})|raw}}
-				</div><!--end span-6-->
-			</div><!--end row-->
-		</div><!--end container-->
-	</footer>
+<!-- Footer Include -->
 
-	<div class="copyright">
-		<div class="container">
-			<div class="row">
-				<div class="span-12">
-					{{widget('profile', 'footer-copyright', { 'profileType':'copyright', 'copyright':'profile'})|raw}}
-				</div><!--end span-12-->
-			</div><!--end row-->
-		</div><!--end container-->
-	</div><!--end copyright-->
-	
-</div><!--end wrap-->
+
+<footer class="bk-footer">
+	<div class="container">
+
+		<div class="flex-container  span-grid--space">
+			<div class="flex-item">
+				{{widget('content', 'footer_content1', { content: '<h4>Address</h4>'})|raw}}
+				{{widget('content', 'footer_content2', { content: '<p>Unit 6 Silverstone Park West, <br>Buckingham Road, Silverstone,<br> Towcester, NN12 8TJ</p>'})|raw}}
+				<div class="bk-footer-tier">
+					{{widget('content', 'footer_content3', { content: '<h4>Telephone</h4>'})|raw}}
+					{{widget('content', 'footer_content4', { content: '<p>01327 858 044</p>'})|raw}}
+				</div>
+			</div>
+			<div class="flex-item">
+				{{widget('content', 'footer_content7', { content: '<h4>Twitter Feed</h4>'})|raw}}
+				{{widget('twitter', 'twitterfeed', {
+				    'searchType': 'BlacknRounds',
+				    'count': '1',
+				    'refreshTime': '1800000'
+				  })|raw}}
+			</div>
+			<div class="flex-item">
+				{{widget('content', 'footer_content8', { content: '<h4>Social</h4>'})|raw}}
+				{{widget('content', 'footer_content9', { content: '
+					<p><a href="http://twitter.com/blacknrounds" target="_blank">Twitter</a></p>
+					<p><a href="http://facebook.com/blacknrounds" target="_blank">Facebook</a></p>
+				'})|raw}}
+			</div>
+			<div class="flex-item">
+				{{widget('content', 'footer_content4', { content: '<h4>Information</h4>'})|raw}}
+				{{widget('content', 'footer_content5', { content: '
+					<p><a href="http://www.silverstone.co.uk/experiences/" target="_blank">Silverstone Experiencs</a></p>
+					<p><a href="http://www.silverstone.co.uk/venue-track/" target="_blank">Silverstone Track Days</a></p>
+				'})|raw}}
+
+				<div class="bk-footer-tier">
+					{{widget('content', 'footer_content6', { content: '<h4>Sponsorships</h4>'})|raw}}
+					{{widget('content', 'footer_content7', { content: '
+						<p><a href="http://www.oufc.co.uk/" target="_blank">Oxford United FC</a></p>
+						<p><a href="http://quantelbifoldracing.com/" target="_blank">Quantel Bifold Racing</a></p>
+					'})|raw}}
+				</div>
+			</div>
+		</div>
+
+	</div>
+</footer>
+
+<!-- Sub Footer -->
+<div class="bk-sub-footer">
+	<div class="container">
+		<div class="flex-container  span-grid--space">
+			<div class="flex-item">
+				{{widget('content', 'footer_content10', { content: '<p>© 2015 Black n Rounds. All rights reserved. Black n Rounds Limited</p>'})|raw}}
+			</div>
+			<div class="flex-item">
+				{{widget('content', 'footer_content11', { content: '<p>Powered by <a href="https://www.uk2.net/" target="_blank">UK2</a></p>'})|raw}}
+			</div>
+		</div>
+	</div>
+</div>

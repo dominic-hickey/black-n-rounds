@@ -1,7 +1,7 @@
 {
-	"name":"Quest",
-	"thumbnail":"quest.png",
-	"screenshot":"quest.png",
+    "name":"Quest",
+    "thumbnail":"quest.png",
+    "screenshot":"quest.png",
     "templateType":"standard",
     "tags": { "en": ["minimal", "modern", "light", "social", "contrast", "space", "slideshow"] },
     "pageTypes":["home"],
@@ -9,9 +9,9 @@
     {
         "Swatch 1": {
             "color1":"#ffffff",
-            "color2":"#626D81",
+            "color2":"#C6C6C6",
             "color3":"#a2bbbb",
-            "color4":"#282735",
+            "color4":"#252525",
             "color5":"#464646",
             "color6":"#282735",
             "color7":"#FFFFFF"
@@ -58,9 +58,9 @@
         "images/feature-bg-2.jpg"
     ],
     "fontSwatch": {
-       "title": "Open Sans",
+       "title": "Source Sans Pro",
         "font1": {
-            "font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
+            "font-family": "\"Source Sans Pro\", Helvetica, Verdana, sans-serif",
             "font-size": "28px",
             "font-weight": "600",
             "line-height": "36px",
@@ -68,7 +68,7 @@
             "letter-spacing": "inherit"
         },
         "font2": {
-            "font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
+            "font-family": "\"Source Sans Pro\", Helvetica, Verdana, sans-serif",
             "font-size": "24px",
             "font-weight": "600",
             "line-height": "32px",
@@ -76,7 +76,7 @@
             "letter-spacing": "inherit"
         },
         "font3": {
-            "font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
+            "font-family": "\"Source Sans Pro\", Helvetica, Verdana, sans-serif",
             "font-size": "20px",
             "font-weight": "inherit",
             "line-height": "28px",
@@ -84,7 +84,7 @@
             "letter-spacing": "inherit"
         },
         "font4": {
-            "font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
+            "font-family": "\"Source Sans Pro\", Helvetica, Verdana, sans-serif",
             "font-size": "18px",
             "font-weight": "500",
             "line-height": "24px",
@@ -92,7 +92,7 @@
             "letter-spacing": "inherit"
         },
         "font5": {
-            "font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
+            "font-family": "\"Source Sans Pro\", Helvetica, Verdana, sans-serif",
             "font-size": "17px",
             "font-weight": "400",
             "line-height": "26px",
@@ -100,18 +100,18 @@
             "letter-spacing": "inherit"
         },
         "font6": {
-            "font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
-            "font-size": "17px",
-            "font-weight": "500",
+            "font-family": "\"Source Sans Pro\", Helvetica, Verdana, sans-serif",
+            "font-size": "15px",
+            "font-weight": "400",
             "line-height": "24px",
-            "color": "@color-swatch7",
-            "letter-spacing": "-1px",
-            "color-hover": "@color-swatch3",
+            "color": "@color-swatch2",
+            "letter-spacing": "inherit",
+            "color-hover": "@color-swatch7",
             "background-color": "@color-swatch2",
             "background-color-hover": "@color-swatch2"
          },
         "font7": {
-            "font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
+            "font-family": "\"Source Sans Pro\", Helvetica, Verdana, sans-serif",
             "font-size": "14px",
             "font-weight": "500",
             "line-height": "22px",
@@ -121,20 +121,20 @@
             "background-color-hover": "@color-swatch2"
         },
         "font8": {
-            "font-family": "\"Abril Fatface\", \"Palatino Linotype\", serif",
-            "font-size": "68px",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "56px",
             "font-weight": "inherit",
             "line-height": "74px",
-            "color": "@color-swatch4",
-            "letter-spacing": "inherit"
+            "color": "@color-swatch1",
+            "letter-spacing": "-1px"
         },
         "font9": {
-            "font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
-            "font-size": "18px",
-            "font-weight": "inherit",
+            "font-family": "\"Source Sans Pro\", Helvetica, Verdana, sans-serif",
+            "font-size": "19px",
+            "font-weight": "400",
             "line-height": "28px",
-            "color": "@color-swatch4",
-            "letter-spacing": "inherit"
+            "color": "@color-swatch2",
+            "letter-spacing": "1px"
         },
         "font10": {
             "font-family": "\"Abril Fatface\", \"Palatino Linotype\", serif",

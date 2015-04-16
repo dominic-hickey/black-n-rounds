@@ -1,31 +1,15 @@
-/*!
- * Name: Flynn
- * Author: David Darnes
- * Author url: http://david.darn.es
- * Tools: Made in Coda, Codekit & Less
- * About: 12 column grid with responsive options, 960px base with large desktop, tablet and mobile views.
- *
- * Based on Tyler Tate's 1kb Grid http://www.usabilitypost.com/2009/05/29/the-1kb-css-grid-part-1/
- * &
- * Twitter Bootstrap http://twitter.github.com/bootstrap/
- */
+// -------------------------------
+// Black n Rounds: CSS > Grid
+// -------------------------------
 
-
-// Base variables for fixed grid columns and gutters, comment this out when using a fluid grid
-
-/*
-@column: 60px; // The column width
-@gutter: 20px; // The gutter width
-*/
-
-// Base variables for fluid grid columns and gutters and a max container width, comment this out when using a fixed grid
+.container {
+	width: 90%;
+	max-width: 1400px;
+	margin: 0 auto;
+}
 
 @column: 6.33%; // The column width
 @gutter: 2%; // The gutter width
-
-.container { // The maximum size of your fluid grid
-	max-width: 1400px;
-}
 
 
 .grid( @column, @gutter ) {
@@ -63,12 +47,6 @@
 	margin-left: @gutter;
 	float: left;
 	max-width: 100%;
-}
-
-.container {
-	clear: both;
-	float: none;
-	margin: 0 auto;
 }
 
 .row {
@@ -113,4 +91,80 @@ img { width: auto~"\9"; }
 	.row { margin: 0; }
 	.row .row { margin: 0; }
 	.container { width: 100%; }
+}
+
+.flex-container {
+
+	&.span-grid {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+
+		margin-left: @gutter-pull;
+	}
+
+	// Space Between
+	// -------------
+
+	// Uses flexbox to give equal space between
+	// any elements inside '.span-grid--space'
+
+	&.span-grid--space {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-ms-flex-pack: justify;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+	}
+
+	&.span-grid--center {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: center;
+		-moz-box-pack: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+
+		@media @mobile {
+			display: block;
+		}
+	}
+
+
+	// Helper Clasess
+	// --------------
+
+	// Add 'flex-vac' to vertically center elements
+	&.flex-vac {
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+
+	// Add 'flex-end' to align elements to end
+	&.flex-end .flex-item:last-child {
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-ms-flex-pack: end;
+		-webkit-justify-content: flex-end;
+		justify-content: flex-end;
+	}
+
 }
