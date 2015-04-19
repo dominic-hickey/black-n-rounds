@@ -10,7 +10,7 @@
         "Swatch 1": {
             "color1":"#ffffff",
             "color2":"#C6C6C6",
-            "color3":"#a2bbbb",
+            "color3":"#27CFC3",
             "color4":"#252525",
             "color5":"#464646",
             "color6":"#282735",
@@ -124,7 +124,7 @@
             "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "56px",
             "font-weight": "inherit",
-            "line-height": "74px",
+            "line-height": "66px",
             "color": "@color-swatch1",
             "letter-spacing": "-1px"
         },

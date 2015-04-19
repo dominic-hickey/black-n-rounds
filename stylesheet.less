@@ -43,16 +43,105 @@ body {
 	position: absolute;
 	top: 0;
 	width: 100%;
-	padding: 30px;
+	padding: 30px 0;
+
+	@media @tablet {
+		.flex-item {
+			display: block;
+			width: 100%;
+		}
+
+		// Navigation
+		.widget .extendednavigation ul {
+			position: absolute;
+			top: 0;
+			z-index: 99999;
+			margin-top: 14px;
+		}
+		.widget .extendednavigation ul li a {
+			color: #aaa;
+		}
+		.widget .extendednavigation li.selected a {
+			color: @color-swatch3;
+		}
+	}
+}
+
+// Header Alt (Default)
+.bk-header.alt {
+	position: relative;
+	padding: 14px 0;
+
+	.logo img {
+		max-width: 180px;
+	}
+
+	.widget .extendednavigation a {
+		color: #A3A3A3;
+		&:hover {
+			color: @color-swatch3;
+		}
+	}
+	.widget .extendednavigation a.pull {
+		top: -23px;
+		&:after {
+			background-color: @color-swatch4;
+			box-shadow: 0 6px 0 lighten(@color-swatch4, 10%), 0 12px 0 lighten(@color-swatch4, 10%);
+		}
+	}
 }
 
 
 // Logo
 // ----------
 
-.logo {
-	max-width: 240px;
-	margin-left: 16px;
+.widget.logo {
+	padding-left: 30px;
+}
+
+.logo a {
+	line-height: 0;
+}
+
+
+// Navigation
+// ----------
+
+.bk-nav {
+	padding-right: 30px;
+	@media @tablet {
+		padding-right: 0;
+	}
+}
+
+.widget .extendednavigation a.pull {
+	top: -35px;
+	@media @tablet {
+		margin-right: 30px;
+	}
+	&:after {
+		width: 32px;
+		height: 4px;
+		background-color: @color-swatch1;
+		box-shadow: 0 8px 0 @color-swatch1, 0 16px 0 @color-swatch1;
+	}
+}
+@media @tablet {
+	.widget .extendednavigation ul {
+		margin-top: 20px;
+		padding-top: 0;
+		background-color: @color-swatch4;
+	}
+	.widget .extendednavigation ul li {
+		border-bottom: 1px solid lighten(@color-swatch4,8%);
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+	.widget .extendednavigation ul li a,
+	.widget .extendednavigation li > .text {
+		padding: 0 40px;
+	}
 }
 
 
@@ -115,7 +204,7 @@ body {
 
 		height: 100%;
 		width: 100%;
-		max-width: 60%;
+		max-width: 90%;
 		margin: 0 auto;
 
 		overflow: auto;
@@ -143,11 +232,54 @@ body {
 }
 
 
+// Feature
+// ----------------
+
+// Feature Height
+.widget.feature .feature-bgimg .content,
+.widget.feature .feature-bgimg {
+	height: 380px;
+	@media @mobile {
+		height: 200px;
+	}
+}
+
+.feature {
+	.spare {
+		max-width: 90%;
+		margin: 0 auto;
+	}
+	h2 {
+		padding-bottom: 4px;
+		span {
+			font-size: 48px;
+			letter-spacing: 0;
+		}
+		@media @mobile {
+			padding-bottom: 12px;
+			span {
+				font-size: 40px;
+			}
+		}
+	}
+	h3 {
+		// display: inline-block;
+		// padding: 10px 20px;
+		// background-color: rgba(0,0,0,0.2);
+	}
+}
+@media @tablet {
+	.widget.feature h3 {
+		font-size: inherit;
+		line-height: inherit;
+	}
+}
+
+
 
 // -----------------------------
 // Main
 // -----------------------------
-
 
 div[role="main"] {
 	padding: 50px 0;
@@ -169,6 +301,14 @@ div[role="main"] {
 		-ms-flex: 1 1 150px;
 		-webkit-flex: 1 1 150px;
 		flex: 1 1 150px;
+		@media @mobile {
+			display: block;
+			width: 100%;
+			margin-top: 20px;
+			-ms-flex: inherit;
+			-webkit-flex: inherit;
+			flex: inherit;
+		}
 	}
 
 	h4 {
@@ -184,6 +324,9 @@ div[role="main"] {
 		font-size: 15px;
 		color: #919191;
 	}
+	a {
+		color: lighten(@color-swatch3,40%);
+	}
 }
 
 .bk-footer-tier {
@@ -197,93 +340,7 @@ div[role="main"] {
 	p {
 		font-size: 14px;
 	}
-}
-
-
-
-
-// -----------------------------
-// Buttons
-// -----------------------------
-
-
-button.btn,
-.signupform fieldset button,
-.contactform button.btn,
-.widget.profile form button,
-.widget.paypalbuynow .widget.button.paypal,
-.widget.ecomcheckout .checkout-order-button,
-.widget.tweet a,
-.widget.dropbox button,
-.blog-search-submit-button,
-.widget.ecombasket .ecombasket-list-container .ecombasket-checkout-wrap .ecombasket-checkout-link,
-.widget.ecombasket .ecombasket-list-container ul li .ecombasket-item-info .ecombasket-remove-button,
-.blog-search-submit-button,
-.ecombasket-summary-link,
-.basket-summary-empty-cta,
-.ecombasket-remove-button,
-.widget.dropbox .file-name,
-.productlist-filter .productlist-search .btn  {
-	background-color: @font-swatch7-background-color;
-	color: @font-swatch7-color;
-	font-family: @font-swatch7-font-family;
-	font-size: @font-swatch7-font-size;
-	font-weight:  @font-swatch7-font-weight;
-	line-height: @font-swatch7-line-height;
-	letter-spacing: @font-swatch7-letter-spacing;
-	padding: 12px 16px;
-	.border-radius(40px);
-	display: inline-block;
-	cursor: pointer;
-	margin: 0;
-	text-decoration: none;
-	vertical-align: top;
-	&:hover {
-		color: @color-swatch1;
-		text-decoration: none;
-		background-color: @font-swatch7-background-color-hover;
-		.transition(background-color, .5s, ease-in);
+	a {
+		color: lighten(@color-swatch3,40%);
 	}
-}
-
-.basket-summary-empty-cta,
-.ecombasket-summary-link {
-	display: inline-block;
-}
-
-.widget.clicktocall a {
-	.border-radius(50px);
-	font-weight: 600;
-	&:hover {
-		.transition(all, .5s, ease-in);
-	}
-}
-
-.widget.ecomcheckout .checkout-order-button:disabled,
-button:disabled {
-	background-color: fadeout(@font-swatch7-background-color, 50%);
-	cursor: not-allowed;
-	&:hover {
-		background-color: fadeout(@font-swatch7-background-color, 50%);
-	}
-}
-
-button {
-	outline: none;
-}
-
-.blog-search-submit-button {
-	border: none;
-}
-
-.widget.paypalbuynow .widget.button.paypal,
-.widget.tweet a,
-.widget.dropbox button {
-	padding-left: 40px;
-}
-
-.widget.dropbox .file-name, .widget.dropbox .file-name:hover {
-	background: transparent;
-	color: @color-swatch4;
-	padding-left: 8px;
 }

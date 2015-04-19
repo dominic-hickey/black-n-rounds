@@ -1,16 +1,21 @@
 {% extends "layout.twig" %}
+
 {% block content %}
 
-{% include 'includes/header.twig' %}
+{% include 'includes/header-alt.twig' %}
+
+{{widget('feature', 'defualt-feature', {
+  'header': 'Our Services',
+  'strapline': 'Its what we do!',
+  'defaultBgImg': asset('images/features/feature--tyre1.jpg'),
+  'positionTopPercentage': '0',
+  'showBtn': false
+})|raw}}
 
 <div role="main">
 	<div class="container">
-		<div class="row">
-			<div class="span-12">	
-			{{zone('main')|raw}}
-			</div><!--end span-12-->
-		</div><!--end row-->
-	</div><!--end container-->
-</div><!--end main-->
+		{{zone('main')|raw}}
+	</div>
+</div>
 
 {% endblock %}
