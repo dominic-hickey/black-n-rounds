@@ -238,7 +238,10 @@ body {
 // Feature Height
 .widget.feature .feature-bgimg .content,
 .widget.feature .feature-bgimg {
-	height: 380px;
+	height: 440px;
+	@media @tablet {
+		height: 320px;
+	}
 	@media @mobile {
 		height: 200px;
 	}
@@ -283,6 +286,9 @@ body {
 
 div[role="main"] {
 	padding: 50px 0;
+	@media @mobile {
+		padding: 30px 0;
+	}
 }
 
 
@@ -291,10 +297,10 @@ div[role="main"] {
 // Footer
 // -----------------------------
 
-
 .bk-footer {
 	padding: 50px 0 80px;
 	background-color: @color-swatch4;
+	border-bottom: 1px solid #323232;
 
 	// Flex Item
 	.flex-item {
@@ -344,3 +350,66 @@ div[role="main"] {
 		color: lighten(@color-swatch3,40%);
 	}
 }
+
+
+// Feature Footer
+// --------------
+
+.feature-footer {
+	width: 100%;
+	padding: 30px 0;
+	background-image: image('/images/features/feature--footer.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-bottom: 1px solid #323232;
+	border-top: 1px solid #323232;
+	.flex-container {
+		height: 80px;
+		@media @mobile {
+			height: inherit;
+		}
+	}
+	.btn {
+		padding: 14px 12px;
+		font-size: 18px;
+	}
+	@media @mobile {
+		.widget.button {
+			margin: 10px 0 0;
+		}
+	}
+}
+
+
+// Intro Boxes
+// -----------
+
+.intro-boxes {
+	.col {
+		padding: 50px;
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+	p {
+		padding-bottom: 0;
+		font-size: 22px;
+		line-height: 40px;
+		-webkit-font-smoothing: antialiased;
+	}
+}
+
+.bg-color {
+	&.green {
+		background-color: @color-swatch3;
+	}
+	p {
+		color: @color-swatch1;
+	}
+}
+
+
+
+
+

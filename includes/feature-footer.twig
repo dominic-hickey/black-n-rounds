@@ -1,0 +1,18 @@
+<!-- Feature: Footer !-->
+<div class="feature-footer">
+	<div class="container">
+		<div class="flex-container  span-grid--space  flex-vac">
+			<div class="flex-item">
+				<img src="{{asset('/images/logo-wht.png')}}" />
+			</div>
+			<div class="flex-item">
+				{{widget('button', 'footer-button', {
+				  'text': 'Follow us on Twitter',
+				  'action': 'external',
+				  'url': 'https://twitter.com/BlacknRounds',
+				  'target': '_blank'
+				})|raw}}
+			</div>
+		</div>
+	</div>
+</div>

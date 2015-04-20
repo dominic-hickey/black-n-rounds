@@ -1,5 +1,5 @@
 <!-- Footer Include -->
-
+{% include 'includes/feature-footer.twig' %}
 
 <footer class="bk-footer">
 	<div class="container">
@@ -12,6 +12,14 @@
 					{{widget('content', 'footer_content3', { content: '<h4>Telephone</h4>'})|raw}}
 					{{widget('content', 'footer_content4', { content: '<p>01327 858 044</p>'})|raw}}
 				</div>
+			</div>
+			<div class="flex-item">
+				{{widget('content', 'footer_content10', { content: '<h4>Opening Times</h4>'})|raw}}
+				{{widget('content', 'footer_content11', { content: '
+					<p>09:00 – 18:15 - Monday to Thursday</p>
+					<p>09:00 – 17:15 - Friday</p>
+					<p>09:00 – 12:00 - Saturday</p>
+				'})|raw}}
 			</div>
 			<div class="flex-item">
 				{{widget('content', 'footer_content8', { content: '<h4>Social</h4>'})|raw}}

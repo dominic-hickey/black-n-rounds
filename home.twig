@@ -42,6 +42,31 @@
 
 </div>
 
+<!-- Intro Boxes -->
+<div class="intro-boxes">
+	<div class="row">
+		<div class="col  span-70  bg-color  green">
+			{{widget('content', 'intro-boxes--1', { content: '
+				<p>Black n Rounds is a new company set up in the heart of world motor sport at Silverstone. We supply and fit road and race tyres and provide other services to both professional and general motorists alike.</p>
+			'})|raw}}
+		</div>
+		<div class="col  span-30">
+			{{widget('content', 'intro-boxes--2', { content: '<h4>What We Do</h4>'})|raw}}
+			<ul>
+				<li>
+					{{widget('content', 'intro-boxes--2', { content: '<p>Tyres</p>'})|raw}}
+				</li>
+				<li>
+					{{widget('content', 'intro-boxes--2', { content: '<p>Tyres</p>'})|raw}}
+				</li>
+				<li>
+					{{widget('content', 'intro-boxes--2', { content: '<p>Tyres</p>'})|raw}}
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
 <div role="main">
 	<div class="container">
 		{{zone('main')|raw}}

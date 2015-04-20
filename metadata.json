@@ -4,7 +4,7 @@
     "screenshot":"quest.png",
     "templateType":"standard",
     "tags": { "en": ["minimal", "modern", "light", "social", "contrast", "space", "slideshow"] },
-    "pageTypes":["home"],
+    "pageTypes":["home", "gallery"],
     "colorSwatches":
     {
         "Swatch 1": {
