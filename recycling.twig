@@ -4,17 +4,17 @@
 
 {% include 'includes/header-alt.twig' %}
 
-{{widget('feature', 'defualt-feature', {
-  'header': 'Our Services',
-  'strapline': 'Its what we do!',
-  'defaultBgImg': asset('images/features/feature--tyre1.jpg'),
+{{widget('feature', 'feature--recycling', {
+  'header': 'Recycling',
+  'strapline': '90% recycled - used tyres, put to good use.',
+  'defaultBgImg': asset('images/features/feature--tree.jpg'),
   'positionTopPercentage': '0',
   'showBtn': false
 })|raw}}
 
 <div role="main">
 	<div class="container">
-		{{zone('main')|raw}}
+		{# {{zone('main')|raw}} #}
 	</div>
 </div>
 

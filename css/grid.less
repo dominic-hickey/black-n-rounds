@@ -8,42 +8,107 @@
 	margin: 0 auto;
 }
 
-.row {
-	width: 100%;
-	.clearfix;
-}
-
-
-// Columns
-// ----------
-
-.col {
-	float: left;
-}
-.col--green {
-	background-color: @color-swatch3;
-}
-
-.span-30 {
-	width: 30%;
-}
-.span-70 {
-	width: 70%;
-}
+// Gutter Width
+@gutter: 30px;
+@gutter-pull: -30px;
 
 .flex-container {
 
-	&.span-grid {
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		-ms-flex-wrap: wrap;
-		-webkit-flex-wrap: wrap;
-		flex-wrap: wrap;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-direction: normal;
+	-moz-box-direction: normal;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+
+	@media @mobile {
+		display: block;
+	}
+
+	// Column Specific
+	// ---------------
+
+	&.span-two--65-35 {
+
+		@media @tablet {
+			display: block;
+		}
+
+		.flex-item:first-child {
+			-webkit-box-ordinal-group: 1;
+		    -moz-box-ordinal-group: 1;
+		    -webkit-order: 0;
+		    -ms-flex-order: 0;
+		    order: 0;
+		    -webkit-box-flex: 1;
+		    -moz-box-flex: 1;
+		    -webkit-flex: 1 1 65%;
+		    -ms-flex: 1 1 65%;
+		    flex: 1 1 65%;
+		    -webkit-align-self: stretch;
+		    -ms-flex-item-align: stretch;
+		    align-self: stretch;
+		}
+		.flex-item:last-child {
+		    -webkit-order: 1;
+		    -ms-flex-order: 1;
+		    order: 1;
+		    -webkit-box-flex: 0;
+		    -moz-box-flex: 0;
+		    -webkit-flex: 0 1 35%;
+		    -ms-flex: 0 1 35%;
+		    flex: 0 1 35%;
+		    -webkit-align-self: stretch;
+		    -ms-flex-item-align: stretch;
+		    align-self: stretch;
+		}
+		&.reverse {
+			.flex-item:first-child {
+			    -webkit-order: 1;
+			    -ms-flex-order: 1;
+			    order: 1;
+			}
+			.flex-item:last-child {
+			    -webkit-order: 0;
+			    -ms-flex-order: 0;
+			    order: 0;
+			}
+		}
+	}
+
+	&.span-grid--thirds {
 
 		margin-left: @gutter-pull;
+
+		// Flex Item
+		.flex-item {
+			-ms-flex: 1 1 33.333%;
+			-webkit-flex: 1 1 33.333%;
+			flex: 1 1 33.333%;
+
+			margin-left: @gutter;
+		}
+
+	}
+	&.span-grid--halves {
+
+		// Flex Item
+		.flex-item {
+			width: 50%;
+			@media @mobile {
+				width: 100%;
+			}
+		}
+
 	}
 
 	// Space Between
@@ -77,10 +142,6 @@
 		-webkit-justify-content: center;
 		-ms-flex-pack: center;
 		justify-content: center;
-
-		@media @mobile {
-			display: block;
-		}
 	}
 
 

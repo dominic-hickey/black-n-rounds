@@ -1,0 +1,158 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+{% include 'includes/header-alt.twig' %}
+
+{{widget('feature', 'feature--our-services', {
+  'header': 'Our Services',
+  'strapline': 'Its what we do!',
+  'defaultBgImg': asset('images/features/feature--tyre1.jpg'),
+  'positionTopPercentage': '0',
+  'showBtn': false
+})|raw}}
+
+<!-- Intro Boxes -->
+<div class="intro-boxes">
+	<!-- Row 1 -->
+	<div class="flex-container  span-grid--halves">
+		<div class="flex-item  col-inner">
+			<div class="p-sml">
+				{{widget('content', 'services-boxes--1', { content: '
+					<p>Black n Rounds is an exciting multi-faceted company, recently opening its flagship store in the heart of world motorsport at Silverstone circuit. Its core business is to supply and fit tyres and ancillary hardware for both the general public and professional and amateur racers.</p>
+					<p>Directors Dave O’Neill and Pete Woolford – both of whom have lived and worked locally for some time – have had decades of experience within the motorsport industry and have instilled in the company a motor-racing ethos of high-quality attention to detail combined with customer service and value for money.</p>
+				'})|raw}}
+			</div>
+		</div>
+		<div class="flex-item  col-inner  bg-color  grey">
+			<div class="p-sml">
+				<ul class="service-icon-list">
+					<li class="services-list-item">
+						<img src="{{asset('/images/icon--circle.png')}}"/>
+						{{widget('content', 'services-boxes--2', { content: '
+							<p>We supply and fit all makes of tyres for cars and bikes, including rare makes, and nitrogen fills</p>
+						'})|raw}}
+					</li>
+					<li class="services-list-item">
+						<img src="{{asset('/images/icon--flag.png')}}"/>
+						{{widget('content', 'services-boxes--3', { content: '
+							<p>We specialise in both road and race tyres for the general motorist and specialist racer alike</p>
+						'})|raw}}
+					</li>
+					<li class="services-list-item">
+						<img src="{{asset('/images/icon--building.png')}}"/>
+						{{widget('content', 'services-boxes--4', { content: '
+							<p>We can store treasured and specialist vehicles in our facility</p>
+						'})|raw}}
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="bg-color  red  p-sml  col-inner">
+		<img src="{{asset('/images/logo-wht.png')}}" class="red-bg-logo" />
+		<div class="flex-container  span-grid--thirds">
+			<div class="flex-item">
+				<ul class="services-list">
+					<li class="services-list-item">
+						{{widget('content', 'services-boxes--6', { content: '
+							<p>All makes of car and bike tyre</p>
+						'})|raw}}
+					</li>
+					<li class="services-list-item">
+						{{widget('content', 'services-boxes--7', { content: '
+							<p>Rare tyres and specialist manufacturers</p>
+						'})|raw}}
+					</li>
+					<li class="services-list-item">
+						{{widget('content', 'services-boxes--8', { content: '
+							<p>Tyre recycling</p>
+						'})|raw}}
+					</li>
+					<li class="services-list-item">
+						{{widget('content', 'services-boxes--9', { content: '
+							<p>Nitrogen fills</p>
+						'})|raw}}
+					</li>
+					<li class="services-list-item">
+						{{widget('content', 'services-boxes--10', { content: '
+							<p>Winter tyre swap and storage</p>
+						'})|raw}}
+					</li>
+				</ul>
+			</div>
+			<div class="flex-item">
+				<ul class="services-list">
+					<li class="services-list-item">
+						{{widget('content', 'services-boxes--11', { content: '
+							<p>Wheel swap for track days at Silverstone</p>
+						'})|raw}}
+					</li>
+					<li class="services-list-item">
+						{{widget('content', 'services-boxes--12', { content: '
+							<p>Wheel alignment</p>
+						'})|raw}}
+					</li>
+					<li class="services-list-item">
+						{{widget('content', 'services-boxes--13', { content: '
+							<p>Cherished and specialist vehicle storage</p>
+						'})|raw}}
+					</li>
+					<li class="services-list-item">
+						{{widget('content', 'services-boxes--14', { content: '
+							<p>Specialist tools and equipment from Teng</p>
+						'})|raw}}
+					</li>
+					<li class="services-list-item">
+						{{widget('content', 'services-boxes--15', { content: '
+							<p>Auto smart alloy wheels</p>
+						'})|raw}}
+					</li>
+				</ul>
+			</div>
+			<div class="flex-item">
+				<ul class="services-list">
+					<li class="services-list-item">
+						{{widget('content', 'services-boxes--16', { content: '
+							<p>Aeroquip fittings</p>
+						'})|raw}}
+					</li>
+					<li class="services-list-item">
+						{{widget('content', 'services-boxes--17', { content: '
+							<p>Advice and guidance</p>
+						'})|raw}}
+					</li>
+					<li class="services-list-item">
+						{{widget('content', 'services-boxes--18', { content: '
+							<p>Track day advice and assistance</p>
+						'})|raw}}
+					</li>
+					<li class="services-list-item">
+						{{widget('content', 'services-boxes--19', { content: '
+							<p>Specialist equipment orders</p>
+						'})|raw}}
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- Row 2 -->
+	<div class="flex-container  span-two--65-35">
+		<div class="flex-item  col-inner">
+			<div class="p-sml">
+				{{widget('content', 'services-boxes--5', { content: '
+					<p>Utilising a large and well-equipped workshop the company supplies all makes of road and race tyres (including rare makes) and has the facility to inflate them using nitrogen. The workshop has an area where customers can securely store their cherished road and race vehicles. Alongside this the showroom is stocked with high quality tools, consumables and hardware.</p>
+					<p>The company pursues an environmental profile, ensuring that where possible it has minimum impact and 90% of used tyres are recycled; all this under one roof right next to Britain’s premier motorsport facility at Silverstone.</p>
+					<p>Followers of League Division 2 football will have noticed that Black n Rounds have teamed up with Oxford United FC as shirt sponsors for the 2014/15 season. We look forward to a successful year both in Oxford and Silverstone.</p>
+					<p>Both Dave and Peter invite everyone to drop by (even just for a look!) The showroom is open to all, there is coffee and tea available and an F1 car on display.</p>
+				'})|raw}}
+			</div>
+		</div>
+		<div class="flex-item  flex-image">
+			<div class="intro-box  bg--workshop">
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

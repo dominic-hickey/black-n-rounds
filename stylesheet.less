@@ -341,10 +341,11 @@ div[role="main"] {
 
 .bk-sub-footer {
 	padding: 16px 0 8px;
-	background-color: darken(@color-swatch4,5%);
+	background-color: @color-swatch4;
 
 	p {
 		font-size: 14px;
+		color: #5C5C5C;
 	}
 	a {
 		color: lighten(@color-swatch3,40%);
@@ -361,8 +362,6 @@ div[role="main"] {
 	background-image: image('/images/features/feature--footer.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	border-bottom: 1px solid #323232;
-	border-top: 1px solid #323232;
 	.flex-container {
 		height: 80px;
 		@media @mobile {
@@ -384,25 +383,182 @@ div[role="main"] {
 // Intro Boxes
 // -----------
 
+.icon {
+	display: inline-block;
+	width: 40px;
+	height: 30px;
+	margin-right: 10px;
+	background-repeat: no-repeat;
+	background-size: 30px;
+	position: relative;
+	top: 9px;
+
+	&.icon--circle {
+		background-image: image('/images/icon--circle.png');
+	}
+	&.icon--flag {
+		background-image: image('/images/icon--flag.png');
+	}
+	&.icon--building {
+		background-image: image('/images/icon--building.png');
+	}
+}
+
+.service-icon-list {
+	@media @mobile {
+		padding: 0!important;
+	}
+}
+.services-list-item {
+	margin: 10px 0 20px;
+}
+
+.p-sml p {
+	margin-bottom: 20px;
+	font-size: 18px!important;
+}
+
+.red-bg-logo {
+	margin-bottom: 20px;
+}
+
+.service-icon-list {
+	p {
+		font-size: 20px!important;
+	}
+	img {
+		width: 32px;
+	}
+}
+
 .intro-boxes {
 	.col {
+		mim-height: 260px;
+	}
+	.col-inner {
 		padding: 50px;
+		@media @mobile {
+			padding: 30px;
+		}
+	}
+	.services-list {
+		@media @mobile {
+			padding: 0;
+		}
+		li {
+			position: relative;
+			margin: 10px 0;
+			padding-left: 26px;
+			&:before {
+				position: absolute;
+				top: 15px;
+				left: 0;
+				width: 4px;
+				height: 4px;
+				content: "";
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				border-radius: 50%;
+				border: 2px solid rgba(255, 255, 255, 0.5);
+			}
+		}
 	}
 	ul {
-		list-style: none;
 		padding: 0;
+		list-style-type: none;
+		@media @mobile {
+			padding: 0 30px;
+		}
+		li {
+			p {
+				margin-bottom: 0;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		h4, p {
+			color: @color-swatch1;
+		}
 	}
 	p {
 		padding-bottom: 0;
 		font-size: 22px;
 		line-height: 40px;
 		-webkit-font-smoothing: antialiased;
+		@media @mobile {
+			font-size: 19px;
+			line-height: 32px;
+		}
+	}
+	h4 {
+		font-weight: bold;
+		letter-spacing: 2px;
+	}
+	a {
+		display: block;
+		margin-top: 20px;
+	}
+}
+
+.flex-image {
+	position: relative;
+}
+.intro-box {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	min-height: 240px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	@media @mobile {
+		position: relative;
+		min-height: 150px;
+	}
+
+	&.bg--car {
+		background-image: image('/images/slides/slide--car.jpg')
+	}
+	&.bg--tyre {
+		background-image: image('/images/slides/slide--tyre2.jpg')
+	}
+	&.bg--tree {
+		background-image: image('/images/slides/slide--tree.jpg')
+	}
+	&.bg--workshop {
+		background-image: image('/images/gallery/gallery--workshop1.jpg')
 	}
 }
 
 .bg-color {
 	&.green {
 		background-color: @color-swatch3;
+		a {
+			color: #0F9086;
+		}
+	}
+	&.blue {
+		background-color: #2779CF;
+		a {
+			color: #243F5C;
+		}
+	}
+	&.red {
+		background-color: #DD383F;
+		a {
+			color: #6F1115;
+		}
+	}
+	&.grey {
+		background-color: #565656;
+	}
+	&.light-grey {
+		background-color: #eee;
+		p {
+			color: @color-swatch5;
+		}
 	}
 	p {
 		color: @color-swatch1;
