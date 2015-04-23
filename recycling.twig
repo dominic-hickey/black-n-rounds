@@ -12,9 +12,116 @@
   'showBtn': false
 })|raw}}
 
-<div role="main">
-	<div class="container">
-		{# {{zone('main')|raw}} #}
+<!-- Intro Boxes -->
+<div class="intro-boxes">
+	<!-- Row 1 -->
+	<div class="flex-container  span-grid--halves">
+		<div class="flex-item  col-inner">
+			<div class="p-sml">
+				{{widget('content', 'recycling-boxes--1', { content: '
+					<h2>We recycle 90% of our tyres</h2>
+					<p>Black ‘n’ Rounds recycle 90% of the tyres we recover through our facility. We currently use <a href="http://www.sussextyres.co.uk/" target="_blank">Pountney Tyres</a>, a family run business, to recycle 90% of the tyres we recover from our facility.</p>
+					<p>We do two things with our tyres. Firstly the tyres are turned into <a href="http://www.wrap.org.uk/user/login?destination=node%2F11313" target="_blank">PAS 108 bales</a> which are then used mostly in the UK for <a href="https://www.gov.uk/government/publications/use-of-pas-108-tyre-bales-in-civil-engineering-and-landfill-infrastructure-works" target="_blank">land engineering</a>. At the moment (and for the foreseeable future) all our bales are being sent to a site in the east of the UK to form the base of a landfill site. Previously they were used in the development of flood damage prevention at the <a href="http://en.wikipedia.org/wiki/Thames_Barrier" target="_blank">Thames Barrier</a>.</p>
+					<p>Secondly, we have a very large and powerful tyre shredding machine. Our tyres are shredded and sent for use in cement kilns. Our shred can go all over the world but most of the shred will be used in the UK. Tyres burn at 1,500 degrees and are much more cost effective than coal, and, when they burn, they are less damaging to the environment.</p>
+				'})|raw}}
+			</div>
+		</div>
+		<div class="flex-item  col-inner  bg-color  grey">
+			<div class="p-sml">
+				<ul class="service-icon-list">
+					<li class="services-list-item">
+						<div class="flex-container">
+							<div class="flex-item--alt">
+								<img src="{{asset('/images/icon--circle.png')}}"/>
+							</div>
+							<div class="flex-item--alt">
+								{{widget('content', 'recycling-boxes--2', { content: '
+									<p>Shredded tyre pellets burn at 1500C and make an excellent, environmentally friendly, fuel source.</p>
+								'})|raw}}
+							</div>
+						</div>
+					</li>
+					<li class="services-list-item">
+						<div class="flex-container">
+							<div class="flex-item--alt">
+								<img src="{{asset('/images/icon--flag.png')}}"/>
+							</div>
+							<div class="flex-item--alt">
+								{{widget('content', 'recycling-boxes--3', { content: '
+									<p>Shredded tyre pellets burn at 1500C and make an excellent, environmentally friendly, fuel source.</p>
+								'})|raw}}
+							</div>
+						</div>
+					</li>
+					<li class="services-list-item">
+						<div class="flex-container">
+							<div class="flex-item--alt">
+								<img src="{{asset('/images/icon--building.png')}}"/>
+							</div>
+						<div class="flex-item--alt">
+							{{widget('content', 'recycling-boxes--4', { content: '
+								<p>Tyre recycling is funded by a charge levied by the Environment Agency on motorists through the tyre retailer.</p>
+							'})|raw}}
+						</div>
+					</li>
+					</div>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- Row 2 -->
+	<div class="flex-container  span-grid--halves">
+		<div class="flex-item  col-inner  bg-color  grey">
+			<div class="p-sml">
+				<ul class="service-icon-list">
+					<li class="services-list-item">
+						<div class="flex-container">
+							<div class="flex-item--alt">
+								<img src="{{asset('/images/icon--circle.png')}}"/>
+							</div>
+							<div class="flex-item--alt">
+								{{widget('content', 'recycling-boxes--5', { content: '
+									<p>Not only are recycled tyres used in making cement, shredded tyre pellets are used as a fuel in cement kilns.</p>
+								'})|raw}}
+							</div>
+						</div>
+					</li>
+					<li class="services-list-item">
+						<div class="flex-container">
+							<div class="flex-item--alt">
+								<img src="{{asset('/images/icon--flag.png')}}"/>
+							</div>
+							<div class="flex-item--alt">
+								{{widget('content', 'recycling-boxes--6', { content: '
+									<p>Recycled tyres are used in the sports industry to make surfaces for play areas and equestrian activities.</p>
+								'})|raw}}
+							</div>
+						</div>
+					</li>
+					<li class="services-list-item">
+						<div class="flex-container">
+							<div class="flex-item--alt">
+								<img src="{{asset('/images/icon--building.png')}}"/>
+							</div>
+						<div class="flex-item--alt">
+							{{widget('content', 'recycling-boxes--7', { content: '
+								<p>Tyre recycling is funded by a charge levied by the Environment Agency on motorists through the tyre retailer.</p>
+							'})|raw}}
+						</div>
+					</li>
+					</div>
+				</ul>
+			</div>
+			<div class="flex-item  col-inner  bg-color  green">
+			<div class="p-sml">
+				{{widget('content', 'recycling-boxes--8', { content: '
+					<h2>48m tyres per annum</h2>
+					<p>More than 48 million tyres are disposed of each year in the UK, that is more than 140,000 tyres per day! Tyres have been banned from landfills since 2006, and according to the Environment Agency 25% are reused, 6% are used to make retread tyres, 25% are burned for energy, and some 44% are now recycled in some way, shape or form.</p>
+					<p>Typical uses for recycled tyres include: construction, landscaping, flooring, fuels, textile manufacture, and for making surfaces for play, sports and equestrian activities.</p>
+				'})|raw}}
+			</div>
+		</div>
+		</div>
 	</div>
 </div>
 

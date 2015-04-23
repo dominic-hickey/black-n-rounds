@@ -28,23 +28,41 @@
 			<div class="p-sml">
 				<ul class="service-icon-list">
 					<li class="services-list-item">
-						<img src="{{asset('/images/icon--circle.png')}}"/>
-						{{widget('content', 'services-boxes--2', { content: '
-							<p>We supply and fit all makes of tyres for cars and bikes, including rare makes, and nitrogen fills</p>
-						'})|raw}}
+						<div class="flex-container">
+							<div class="flex-item--alt">
+								<img src="{{asset('/images/icon--circle.png')}}"/>
+							</div>
+							<div class="flex-item--alt">
+								{{widget('content', 'services-boxes--2', { content: '
+									<p>We supply and fit all makes of tyres for cars and bikes, including rare makes, and nitrogen fills</p>
+								'})|raw}}
+							</div>
+						</div>
 					</li>
 					<li class="services-list-item">
-						<img src="{{asset('/images/icon--flag.png')}}"/>
-						{{widget('content', 'services-boxes--3', { content: '
-							<p>We specialise in both road and race tyres for the general motorist and specialist racer alike</p>
-						'})|raw}}
+						<div class="flex-container">
+							<div class="flex-item--alt">
+								<img src="{{asset('/images/icon--flag.png')}}"/>
+							</div>
+							<div class="flex-item--alt">
+								{{widget('content', 'services-boxes--3', { content: '
+									<p>We specialise in both road and race tyres for the general motorist and specialist racer alike</p>
+								'})|raw}}
+							</div>
+						</div>
 					</li>
 					<li class="services-list-item">
-						<img src="{{asset('/images/icon--building.png')}}"/>
-						{{widget('content', 'services-boxes--4', { content: '
-							<p>We can store treasured and specialist vehicles in our facility</p>
-						'})|raw}}
+						<div class="flex-container">
+							<div class="flex-item--alt">
+								<img src="{{asset('/images/icon--building.png')}}"/>
+							</div>
+						<div class="flex-item--alt">
+							{{widget('content', 'services-boxes--4', { content: '
+								<p>We can store treasured and specialist vehicles in our facility</p>
+							'})|raw}}
+						</div>
 					</li>
+					</div>
 				</ul>
 			</div>
 		</div>

@@ -1,0 +1,70 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+{% include 'includes/header-alt.twig' %}
+
+{{widget('feature', 'feature--contact', {
+  'header': 'Contact Us',
+  'strapline': 'We would love to hear from you.',
+  'defaultBgImg': asset('images/features/feature--contact.jpg'),
+  'positionTopPercentage': '0',
+  'showBtn': false
+})|raw}}
+
+<!-- Intro Boxes -->
+<div class="intro-boxes">
+	<!-- Row 1 -->
+	<div class="flex-container  span-grid--halves">
+		<div class="flex-item  col-inner  bg-color  blue p-sml">
+			{{widget('content', 'contact-boxes--2', { content: '
+				<h2>Get in Touch</h2>
+				<p>Black ‘n’ Rounds love talking about tyres! No matter what your need is we can supply a full range of road and race tyres, including rare makes. Our state-of-the-art facility at Silverstone is fully equipped to handle all your tyre requirements, including nitrogen inflation.</p>
+				<p>We have a wide selection of specialist tools and equipment available, and we are also able to provide storage facilities for treasured and specialist road and race cars.</p>
+				<p>Drop us a line using the form on this page (but make sure to include your email address otherwise we won’t be able to get back to you!) You can also call us, or simply pop in to see us, the contact details are right here on this page!</p>
+			'})|raw}}
+		</div>
+		<div class="flex-item  col-inner  bg-color  grey">
+			<div class="p-sml">
+				<div class="flex-container  span-grid--halves">
+					<div class="flex-item">
+						{{widget('content', 'contact-boxes--2', { content: '
+						<h4>ADDRESS</h4>
+							<p>Black n Rounds<br> Unit 6 Silvertstone Park West <br> Buckingham Road, <br>Silverstone, <br>Towcester, NN12 8TJ</p>
+						'})|raw}}
+					</div>
+					<div class="flex-item">
+						{{widget('content', 'contact-boxes--5', { content: '
+							<h4>SOCIAL</h4>
+							<p><a href="http://twitter.com/@BlacknRounds" target="_blank">twitter.com/@BlacknRounds</a><br><a href="http://facebook.com/@BlacknRounds" target="_blank">facebook.com/BlacknRounds</a></p>
+						'})|raw}}
+						{{widget('content', 'contact-boxes--6', { content: '
+							<h4>OPENING TIMES</h4>
+							<p>09:00 – 18:15 - Monday to Thursday <br>09:00 – 17:15 - Friday<br>09:00 – 12:00 - Saturday</p>
+						'})|raw}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Row 2 -->
+	<div class="flex-container  span-grid--halves">
+		<div class="flex-item">
+			<iframe width='100%' height='594px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/dominic-hickey.m0c767h3/attribution,zoompan,zoomwheel,geocoder,share.html?access_token=pk.eyJ1IjoiZG9taW5pYy1oaWNrZXkiLCJhIjoiczFjT2p2dyJ9.zwi5H1Z1gISdOng5qkCgUA'></iframe>
+		</div>
+		<div class="flex-item  col-inner">
+			<div class="p-sml">
+				{{widget('content', 'contact-boxes--6', { content: '
+					<h2>Contact Us</h2>
+				'})|raw}}
+				{{widget('contactform', 'contact-boxes--5', {
+				    'text': 'Submit',
+				    'formTitle': 'Black n Rounds Contact Form',
+				    'email': 'profile'
+				  })|raw}}
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
