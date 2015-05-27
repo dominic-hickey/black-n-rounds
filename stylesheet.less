@@ -47,7 +47,7 @@ body {
 
 	@media @tablet {
 		.flex-item {
-			display: block;
+			display: flex;
 			width: 100%;
 		}
 
@@ -56,6 +56,7 @@ body {
 			position: absolute;
 			top: 0;
 			z-index: 99999;
+			width: 100%;
 			margin-top: 14px;
 		}
 		.widget .extendednavigation ul li a {
@@ -108,8 +109,11 @@ body {
 // ----------
 
 .bk-nav {
-	padding-right: 30px;
+	display: inline-block;
+	vertical-align: middle;
+	padding-right: 5px;
 	@media @tablet {
+		width: 100%;
 		padding-right: 0;
 	}
 }
